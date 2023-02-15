@@ -1,0 +1,79 @@
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative; /* Adicionado para o posicionamento do pseudo-elemento */
+}
+
+label {
+  margin-top: 16px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+h1 {
+  display: flex;
+  font-size: 60px;
+  justify-content: center;
+}
+
+input,
+select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 8px;
+  background-color: #e4f2ff; /* adicionado para contraste azulado */
+}
+
+input:focus {
+  background-color: #c4e4ff; /* adicionado para destacar o input ativo */
+  text-align: center;
+}
+select:focus {
+  background-color: #c4e4ff; /* adicionado para destacar o input ativo */
+  text-align: center;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 40%;
+  margin: 0 auto;
+  display: block;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+button:hover {
+  background-color: #0062cc;
+}
+
+.progress {
+  position: absolute; /* Adicionado para o posicionamento do pseudo-elemento */
+  bottom: 0; /* Adicionado para o posicionamento do pseudo-elemento */
+  left: 0; /* Adicionado para o posicionamento do pseudo-elemento */
+  height: 4px;
+  width: 0;
+  background-color: #007bff;
+  transition: width 0.5s ease-out; /* Adicionado para a transição de largura */
+}
+
+/* Adicionado pseudo-elemento */
+form::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #ccc;
+}
