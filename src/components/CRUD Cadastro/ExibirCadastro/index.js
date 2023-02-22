@@ -1,4 +1,4 @@
-import "./style.module.css";
+import "./ExibirCadastro.css";
 
 function ExibirCadastro() {
     return (
