@@ -3,7 +3,7 @@ import "./ExibirCadastro.css";
 function ExibirCadastro() {
     return (
         <>
-
+            
         </>
     );
 };
