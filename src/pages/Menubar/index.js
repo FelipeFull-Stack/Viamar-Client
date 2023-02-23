@@ -39,20 +39,20 @@ function Menubar() {
 							Cadastrar
 						</button>
 					</li>
-					<li>
+					{/* <li>
 						<button
 							onClick={() => {
-								navigate("/cadastrar");
+								navigate("/edit-cadastro");
 							}}>
-							Cadastrar
+							Editar Cadastro
 						</button>
-					</li>
+					</li> */}
 					<li>
 						<button
 							onClick={() => {
-								navigate("/cadastrar");
+								navigate("/exibir-cadastro");
 							}}>
-							Cadastrar
+							Exibir Cadastros
 						</button>
 					</li>
 					<li>
@@ -91,12 +91,12 @@ function Menubar() {
 								}}>
 								Cadastro
 							</button>
-							<button
+							{/* <button
 								onClick={() => {
-									navigate("/cadastro");
+									navigate("/edit-cadastro");
 								}}>
-								botão 2
-							</button>
+								Editar Cadastro
+							</button> */}
 							<button
 								onClick={() => {
 									navigate("/cadastro");

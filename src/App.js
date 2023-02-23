@@ -13,8 +13,8 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/cadastro" element={<Cadastro />} />
-				<Route path="/exibir-cadastro" element={<EditCadastro />} />
-				<Route path="/edit-cadastro" element={<ExibirCadastros />} />
+				<Route path="/exibir-cadastro" element={<ExibirCadastros />} />
+				<Route path="/edit-cadastro" element={<EditCadastro />} />
 			</Routes>
 			<Footer />
 		</>

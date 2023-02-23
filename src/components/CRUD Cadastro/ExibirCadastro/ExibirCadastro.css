@@ -1,0 +1,49 @@
+@media (max-width: 2500px) and (min-width: 1000px) {
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	.div-geral-exibircadastros {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1px;
+	}
+
+	.div-map-cadastros {
+		padding: 5px;
+		width: 94%;
+		height: 65px;
+		border: 2px solid black;
+		border-radius: 25px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		gap: 5px;
+		transition: transform 0.3s ease;
+	}
+	.div-map-cadastros:hover {
+		transform: scale(1.1);
+	}
+	.div-dupla-cadastro {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 2px;
+        border: 1px solid black;
+        border-radius: 10px;
+	}
+	.div-unica-cadastro {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 5px;
+	}
+}
