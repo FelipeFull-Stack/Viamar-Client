@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { api } from "../../../api/api";
 import "./CriarCadastro.css";
 
 function CriarCadastro() {
+	const navigate = useNavigate();
 	const [form, setForm] = useState({
 		empresaOnibus: "",
 		placaOnibus: "",
@@ -63,10 +66,15 @@ function CriarCadastro() {
 		setForm({ ...form, [event.target.name]: [event.target.value] });
 	};
 
-	const handleSubmit = (event) => {
+	async function handleSubmit(event) {
 		event.preventDefault();
-		console.log(form);
-	};
+		try {
+			await api.post("/cadastro", form);
+			navigate("/exibir-cadastros");
+		} catch (err) {
+			console.log(`Erro do Front-end em CriarCadastro/handleSubmit: ${err}`);
+		}
+	}
 
 	return (
 		<form onSubmit={handleSubmit} style={{ position: "relative" }}>
@@ -269,7 +277,10 @@ function CriarCadastro() {
 				<button className="btn1 button-cadastro" type="submit">
 					Enviar
 				</button>
-				<button className="btn2 button-cadastro" type="button" onClick={clearFunction}>
+				<button
+					className="btn2 button-cadastro"
+					type="button"
+					onClick={clearFunction}>
 					Limpar
 				</button>
 			</div>

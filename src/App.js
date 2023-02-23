@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import { Home } from "./pages/Home";
-import { Cadastro } from "./pages/Cadastro";
-import { EditCadastro } from "./pages/EditCadastro";
-import { ExibirCadastros } from "./pages/ExibirCadastros";
-import { Menubar } from "./pages/Menubar";
-import { Footer } from "./pages/Footer";
+import { Home } from "./pages/Home/index";
+import { Cadastro } from "./pages/Cadastro/index";
+import { EditCadastro } from "./pages/EditCadastro/index";
+import { ExibirCadastros } from "./pages/ExibirCadastros/index";
+import { Menubar } from "./pages/Menubar/index";
+import { Footer } from "./pages/Footer/index";
 
 function App() {
 	return (
@@ -13,7 +13,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/cadastro" element={<Cadastro />} />
-				<Route path="/exibir-cadastro" element={<ExibirCadastros />} />
+				<Route path="/exibir-cadastros" element={<ExibirCadastros />} />
 				<Route path="/edit-cadastro" element={<EditCadastro />} />
 			</Routes>
 			<Footer />

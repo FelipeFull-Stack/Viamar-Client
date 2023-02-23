@@ -50,7 +50,7 @@ function Menubar() {
 					<li>
 						<button
 							onClick={() => {
-								navigate("/exibir-cadastro");
+								navigate("/exibir-cadastros");
 							}}>
 							Exibir Cadastros
 						</button>
