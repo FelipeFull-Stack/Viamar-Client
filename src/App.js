@@ -12,6 +12,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/cadastro" element={<Cadastro />} />
       </Routes>
       <Footer />
     </>
