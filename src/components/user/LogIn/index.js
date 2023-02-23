@@ -1,6 +1,8 @@
 import "./LogIn.css";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { AuthContext } from "../../../context/authContext";
+import { api } from "../../../api/api";
 
 function LogIn() {
 	const navigate = useNavigate();
