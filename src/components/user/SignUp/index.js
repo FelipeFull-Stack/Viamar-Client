@@ -39,7 +39,9 @@ function SignUp() {
 									placeholder="Username"
 									required
 									id="username"
-                                    onChange={handleChange}
+									name="email"
+									value={form.email}
+									onChange={handleChange}
 								/>
 							</div>
 							<div>
@@ -48,7 +50,9 @@ function SignUp() {
 									placeholder="Password"
 									required
 									id="password"
-                                    onChange={handleChange}
+									name="password"
+									value={form.password}
+									onChange={handleChange}
 								/>
 							</div>
 							<div>

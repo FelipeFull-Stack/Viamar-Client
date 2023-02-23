@@ -1,8 +1,34 @@
 import "./LogIn.css";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 function LogIn() {
 	const navigate = useNavigate();
+	const [form, setForm] = useState({
+		email: "",
+		password: "",
+	});
+
+	const { loggedInUser, setLoggedInUser } = useContext(AuthContext);
+
+	console.log(loggedInUser);
+
+	function handleChange(event) {
+		setForm({ ...form, [event.target.name]: event.target.value });
+	}
+
+	async function handleSubmit(event) {
+		event.preventDefault();
+
+		try {
+			const response = await api.post("/user/login", form);
+			setLoggedInUser(response.data);
+			localStorage.setItem("loggedInUser", JSON.stringify(response.data));
+			navigate("/conectAPIforINV");
+		} catch (err) {
+			console.log(`Erro do Front-end em LogIn(handleSubmit): ${err}`);
+		}
+	}
 	return (
 		<>
 			<body>
@@ -11,18 +37,10 @@ function LogIn() {
 						<form action="">
 							<h1>Log in</h1>
 							<div>
-								<input
-									type="text"
-									placeholder="Username"
-									id="username"
-								/>
+								<input type="text" placeholder="Username" id="username" />
 							</div>
 							<div>
-								<input
-									type="password"
-									placeholder="Password"
-									id="password"
-								/>
+								<input type="password" placeholder="Password" id="password" />
 							</div>
 							<div>
 								<input type="submit" value="Log in" />
