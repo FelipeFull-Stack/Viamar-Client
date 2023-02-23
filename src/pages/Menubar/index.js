@@ -1,11 +1,46 @@
-import "./style.module.css";
+import "./Menubar.css";
+import { useNavigate } from "react-router-dom";
 
 function Menubar() {
-    return (
-        <>
-
-        </>
-    );
-};
+	const navigate = useNavigate();
+	return (
+		<>
+			<div className="div-geral-menubar">
+				<div>
+					<button
+						onClick={() => {
+							navigate("/cadastrar");
+						}}>
+						Cadastrar
+					</button>
+				</div>
+				<div>
+					<button
+						onClick={() => {
+							navigate("/cadastrar");
+						}}>
+						Cadastrar
+					</button>
+				</div>
+				<div>
+					<button
+						onClick={() => {
+							navigate("/cadastrar");
+						}}>
+						Cadastrar
+					</button>
+				</div>
+				<div>
+					<button
+						onClick={() => {
+							navigate("/cadastrar");
+						}}>
+						Cadastrar
+					</button>
+				</div>
+			</div>
+		</>
+	);
+}
 
 export { Menubar };
