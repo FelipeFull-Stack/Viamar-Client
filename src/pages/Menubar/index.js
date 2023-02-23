@@ -6,37 +6,42 @@ function Menubar() {
 	return (
 		<>
 			<div className="div-geral-menubar">
-				<div>
-					<button
-						onClick={() => {
-							navigate("/cadastrar");
-						}}>
-						Cadastrar
-					</button>
+				<div className="div-logo">
+					<h1>Logo Aqui</h1>
 				</div>
-				<div>
-					<button
-						onClick={() => {
-							navigate("/cadastrar");
-						}}>
-						Cadastrar
-					</button>
-				</div>
-				<div>
-					<button
-						onClick={() => {
-							navigate("/cadastrar");
-						}}>
-						Cadastrar
-					</button>
-				</div>
-				<div>
-					<button
-						onClick={() => {
-							navigate("/cadastrar");
-						}}>
-						Cadastrar
-					</button>
+				<div className="div-todos-buttons">
+					<div>
+						<button
+							onClick={() => {
+								navigate("/cadastrar");
+							}}>
+							Cadastrar
+						</button>
+					</div>
+					<div>
+						<button
+							onClick={() => {
+								navigate("/cadastrar");
+							}}>
+							Cadastrar
+						</button>
+					</div>
+					<div>
+						<button
+							onClick={() => {
+								navigate("/cadastrar");
+							}}>
+							Cadastrar
+						</button>
+					</div>
+					<div>
+						<button
+							onClick={() => {
+								navigate("/cadastrar");
+							}}>
+							Cadastrar
+						</button>
+					</div>
 				</div>
 			</div>
 		</>

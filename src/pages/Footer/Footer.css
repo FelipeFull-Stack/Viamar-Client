@@ -1,0 +1,52 @@
+@media (max-width: 2500px) and (min-width: 500px) {
+	.footer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0;
+		color: white;
+		height: 40px;
+		width: 100%;
+		background: rgb(65, 62, 62);
+		font-weight: 900;
+	}
+
+	.footer p {
+		font-size: 16px;
+	}
+	.footer p {
+		color: white;
+	}
+
+	.footer p:hover {
+		background: linear-gradient(
+			to right,
+			red,
+			orange,
+			yellow,
+			green,
+			blue,
+			indigo,
+			violet
+		);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: transparent;
+	}
+}
+@media (max-width: 499px) and (min-width: 1px) {
+	.footer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0;
+		color: white;
+		height: 40px;
+		width: 100%;
+		background: rgb(65, 62, 62);
+	}
+
+	.footer p {
+		font-size: 11px;
+	}
+}
