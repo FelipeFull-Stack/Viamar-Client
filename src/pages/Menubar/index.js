@@ -36,7 +36,7 @@ function Menubar() {
 							onClick={() => {
 								navigate("/cadastro");
 							}}>
-							Cadastrar
+							Formulário
 						</button>
 					</li>
 					{/* <li>
@@ -52,7 +52,7 @@ function Menubar() {
 							onClick={() => {
 								navigate("/exibir-cadastros");
 							}}>
-							Exibir Cadastros
+							Cadastros
 						</button>
 					</li>
 					<li>
@@ -89,7 +89,7 @@ function Menubar() {
 								onClick={() => {
 									navigate("/cadastro");
 								}}>
-								Cadastro
+								Formulário
 							</button>
 							{/* <button
 								onClick={() => {
@@ -99,9 +99,9 @@ function Menubar() {
 							</button> */}
 							<button
 								onClick={() => {
-									navigate("/cadastro");
+									navigate("/exibir-cadastros");
 								}}>
-								botão 3
+								Cadastros
 							</button>
 							<button
 								onClick={() => {

@@ -11,36 +11,36 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		gap: 1px;
 	}
 
 	.div-map-cadastros {
-		padding: 5px;
+		padding: 7.5px;
 		width: 90%;
 		height: 65px;
 		border: 2px solid black;
-		border-radius: 25px;
+		border-radius: 10px;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
 		align-items: center;
 		gap: 5px;
+		background-color: rgb(248, 248, 248);
 		transition: transform 0.3s ease;
 	}
 	.div-map-cadastros:hover {
-		transform: scale(1.05);
+		transform: scale(1.015);
 	}
 	.div-map-cadastros h2 {
 		font-size: 1rem;
+		color: black;
 	}
 	.div-dupla-cadastro {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		align-items: center;
+		align-items: flex-start;
 		gap: 2px;
-        border: 1px solid black;
-        border-radius: 10px;
+		border-radius: 10px;
 	}
 	.div-unica-cadastro {
 		display: flex;
@@ -52,6 +52,18 @@
 		font-size: 1rem;
 	}
 	.div-button-ver {
-		border: 1px solid black;
+		height: 40px;
+		width: 7.5%;
+	}
+	.button-ver {
+		height: 100%;
+		width: 100%;
+		border: none;
+		border-radius: 25px;
+		font-weight: 700;
+		background-color: rgb(160, 160, 160);
+	}
+	.button-ver:hover {
+		background-color: #24ff65;
 	}
 }

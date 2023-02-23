@@ -78,7 +78,7 @@ function CriarCadastro() {
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<h1>Cadastro</h1>
+			<h1>Formulário de Cadastro</h1>
 			<div className="div-dupla">
 				<div className="div-unica-esquerda">
 					<label htmlFor="empresaOnibus">Nome da Empresa do Ônibus:</label>

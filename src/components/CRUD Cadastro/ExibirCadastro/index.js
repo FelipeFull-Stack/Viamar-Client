@@ -24,8 +24,11 @@ function ExibirCadastro() {
 	return (
 		<>
 			<div className="div-geral-exibircadastros">
-				<h1>Cadastros</h1>
+				<h1>Lista de Cadastros</h1>
 				{cadastros.map((currentElement) => {
+					const formattedDate = new Date(
+						currentElement.createdAt,
+					).toLocaleDateString("pt-BR");
 					return (
 						<>
 							<div className="div-map-cadastros">
@@ -50,12 +53,12 @@ function ExibirCadastro() {
 								</div>
 								<div className="div-dupla-cadastro">
 									<div className="div-unica-cadastro">
-										<h2>Duração: </h2>
-										<p>{currentElement.quantidadeDias}</p>
+										<h2>Protocolo: </h2>
+										<p>{currentElement._id}</p>
 									</div>
 									<div className="div-unica-cadastro">
 										<h2>Criação do Cadastro: </h2>
-										<p>{currentElement.createdAt}</p>
+										<p>{formattedDate}</p>
 									</div>
 								</div>
 							</div>

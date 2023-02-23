@@ -8,6 +8,7 @@ import { Menubar } from "./pages/Menubar/index";
 import { Footer } from "./pages/Footer/index";
 import { LogIn } from "./components/user/LogIn/index";
 import { SignUp } from "./components/user/SignUp/index";
+import "./App.css";
 
 function App() {
 	return (
