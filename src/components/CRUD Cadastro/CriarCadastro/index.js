@@ -77,7 +77,7 @@ function CriarCadastro() {
 	}
 
 	return (
-		<form onSubmit={handleSubmit} style={{ position: "relative" }}>
+		<form onSubmit={handleSubmit}>
 			<h1>Cadastro</h1>
 			<div className="div-dupla">
 				<div className="div-unica-esquerda">

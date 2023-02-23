@@ -26,7 +26,7 @@ function LogIn() {
 			const response = await api.post("/user/login", form);
 			setLoggedInUser(response.data);
 			localStorage.setItem("loggedInUser", JSON.stringify(response.data));
-			navigate("/conectAPIforINV");
+			navigate("/home");
 		} catch (err) {
 			console.log(`Erro do Front-end em LogIn(handleSubmit): ${err}`);
 		}
@@ -36,13 +36,27 @@ function LogIn() {
 			<body>
 				<div class="container">
 					<section id="content">
-						<form action="">
+						<form action="" onSubmit={handleSubmit}>
 							<h1>Log in</h1>
 							<div>
-								<input type="text" placeholder="Username" id="username" />
+								<input
+									type="text"
+									placeholder="Username"
+									id="username"
+									name="email"
+									value={form.email}
+									onChange={handleChange}
+								/>
 							</div>
 							<div>
-								<input type="password" placeholder="Password" id="password" />
+								<input
+									type="password"
+									placeholder="Password"
+									id="password"
+									name="password"
+									value={form.password}
+									onChange={handleChange}
+								/>
 							</div>
 							<div>
 								<input type="submit" value="Log in" />
