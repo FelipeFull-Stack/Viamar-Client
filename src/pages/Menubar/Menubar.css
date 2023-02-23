@@ -1,63 +1,128 @@
 @media (max-width: 2500px) and (min-width: 1000px) {
-    * {
-        margin: 0;
-        padding: 0;
-    }
+	.div-central-menu {
+		display: none;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
 	.div-geral-menubar {
-        margin: 0;
-        margin-bottom: 40px;
-        width: 100%;
-        height: auto;
+		margin: 0;
+		margin-bottom: 40px;
+		width: 100%;
+		height: auto;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-        background-color: rgb(248, 248, 248);
+		background-color: rgb(248, 248, 248);
 	}
 
 	.div-todos-buttons {
-        margin-left: 5px;
-        margin-right: 10px;
-        width: 50%;
-        height: 100px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+		margin-left: 5px;
+		margin-right: 10px;
+		width: 50%;
+		height: 100px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 	}
-    .div-todos-buttons button {
-        margin: 0;
-        padding: 0;
-        height: 100px;
-        width: 125px;
-        background-color: rgb(248, 248, 248);
-        color: black;
-        font-size: 20px;
-        font-weight: 700;
-        border: none;
-        border-radius: 0px;
-        gap: 10px;
+	.div-todos-buttons ul {
+		text-decoration: none;
+	}
+	.div-todos-buttons li {
+		list-style: none;
+	}
+
+	.div-todos-buttons button {
+		margin: 0;
+		padding: 0;
+		height: 100px;
+		width: 125px;
+		background-color: rgb(248, 248, 248);
+		color: black;
+		font-size: 20px;
+		font-weight: 700;
+		border: none;
+		border-radius: 0px;
+		gap: 10px;
+	}
+	.div-todos-buttons button:hover {
+		background-color: #c4e4ff;
+		color: rgb(0, 0, 0);
+	}
+	.div-logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 5px;
+		margin: 5px;
+		margin-left: 20px;
+	}
+}
+@media (max-width: 999px) and (min-width: 1px) {
+	.div-geral-menubar {
+		display: none;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	.div-central-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0px;
+        padding-top: 10px;
+        padding: 10px;
+		display: flex;
+		justify-content: space-between;
+	}
+    .div-central-menu img{
+		width: 20%;
+        border-radius: 25px;
+	}
+    
+    .div-hamburguer {
+        width: 30%;
+        margin: 15px;
+        margin-bottom: 25px;
     }
-    .div-todos-buttons button:hover {
-        background-color:#c4e4ff;
-        color: rgb(0, 0, 0);
-    }
-    .div-logo {
+    .button-menu-hamburguer {
+        background-color: white;
+        border: 2px solid black;
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid black;
-        padding: 5px;
-        margin: 5px;
-        margin-left: 20px;
+        border-radius: 500px;
+        height: 70px;
     }
-}
-
-@media (max-width: 999px) and (min-width: 1px) {
-    * {
-        margin: 0;
-        padding: 0;
+    .button-menu-hamburguer b {
+        font-size: 1.25rem;
+        color: black;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .buttons button {
+        width: 100%;
+        height: 50px;
+        background-color: rgb(65, 65, 65);
+        color: white;
+        border-radius: 500px;
+        margin: 1px;
+        font-size: 1rem;
     }
 
-
+	
 }

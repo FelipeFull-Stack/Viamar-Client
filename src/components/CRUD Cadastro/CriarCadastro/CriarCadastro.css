@@ -109,7 +109,7 @@
 		text-align: center;
 	}
 
-	button {
+	.button-cadastro {
 		padding: 8px 16px;
 		background-color: #007bff;
 		color: #fff;
@@ -124,7 +124,7 @@
 		margin-bottom: 50px;
 	}
 
-	button:hover {
+	.button-cadastro:hover {
 		background-color: #00ff2a;
 	}
 
@@ -279,7 +279,7 @@
 		text-align: center;
 	}
 
-	button {
+	.button-cadastro {
 		padding: 8px 16px;
 		background-color: #007bff;
 		color: #fff;
@@ -294,7 +294,7 @@
 		margin-bottom: 50px;
 	}
 
-	button:hover {
+	.button-cadastro:hover {
 		background-color: #00ff2a;
 	}
 
@@ -450,7 +450,7 @@
 		text-align: center;
 	}
 
-	button {
+	.button-cadastro {
 		padding: 8px 16px;
 		background-color: #007bff;
 		color: #fff;
@@ -465,7 +465,7 @@
 		margin-bottom: 50px;
 	}
 
-	button:hover {
+	.button-cadastro:hover {
 		background-color: #00ff2a;
 	}
 
