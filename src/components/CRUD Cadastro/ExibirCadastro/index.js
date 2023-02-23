@@ -1,7 +1,7 @@
 import "./ExibirCadastro.css";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { api } from "../../../api/api";
+import { api } from "../../../api/api.js";
 
 function ExibirCadastro() {
 	const params = useParams();
@@ -10,9 +10,9 @@ function ExibirCadastro() {
 	const [cadastros, setCadastros] = useState([]);
 
 	useEffect(() => {
-		async function fetchCadastros(req, res) {
+		async function fetchCadastros() {
 			try {
-				const response = await api.put("/cadastro");
+				const response = await api.get("/cadastro");
 				setCadastros(response.data);
 			} catch (err) {
 				console.log(`Erro do Front-end em ExibirCadastro: ${err}`);

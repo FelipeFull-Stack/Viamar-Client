@@ -1,5 +1,7 @@
 @media (max-width: 2500px) and (min-width: 500px) {
 	.footer {
+		position: relative;
+		bottom: 0;
 		display: flex;
 		justify-content: center;
 		align-items: center;

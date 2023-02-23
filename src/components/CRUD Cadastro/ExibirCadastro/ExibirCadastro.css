@@ -16,7 +16,7 @@
 
 	.div-map-cadastros {
 		padding: 5px;
-		width: 94%;
+		width: 90%;
 		height: 65px;
 		border: 2px solid black;
 		border-radius: 25px;
@@ -28,7 +28,10 @@
 		transition: transform 0.3s ease;
 	}
 	.div-map-cadastros:hover {
-		transform: scale(1.1);
+		transform: scale(1.05);
+	}
+	.div-map-cadastros h2 {
+		font-size: 1rem;
 	}
 	.div-dupla-cadastro {
 		display: flex;
@@ -45,5 +48,10 @@
 		justify-content: center;
 		align-items: center;
 		gap: 5px;
+		padding: 5px;
+		font-size: 1rem;
+	}
+	.div-button-ver {
+		border: 1px solid black;
 	}
 }

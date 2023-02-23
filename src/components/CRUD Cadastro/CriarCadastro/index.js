@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { api } from "../../../api/api";
 import "./CriarCadastro.css";
@@ -43,27 +43,27 @@ function CriarCadastro() {
 		});
 	}
 
-	useEffect(() => {
-		const dataEntradaCal = new Date(form.dataEntrada);
-		const dataSaidaCal = new Date(form.dataSaida);
+	// useEffect(() => {
+	const dataEntradaCal = new Date(form.dataEntrada);
+	const dataSaidaCal = new Date(form.dataSaida);
 
-		if (form.dataEntrada !== "" && form.dataSaida !== "") {
-			if (dataEntradaCal <= dataSaidaCal) {
-				const umDiaEmMilissegundos = 24 * 60 * 60 * 1000;
-				setForm({
-					...form,
-					quantidadeDias: Math.round(
-						Math.abs((dataEntradaCal - dataSaidaCal) / umDiaEmMilissegundos),
-					),
-				});
-			} else {
-				window.alert("Erro: a data de saída é antes da data de entrada.");
-			}
+	if (form.dataEntrada !== "" && form.dataSaida !== "") {
+		if (dataEntradaCal <= dataSaidaCal) {
+			const umDiaEmMilissegundos = 24 * 60 * 60 * 1000;
+			setForm({
+				...form,
+				quantidadeDias: Math.round(
+					Math.abs((dataEntradaCal - dataSaidaCal) / umDiaEmMilissegundos),
+				),
+			});
+		} else {
+			window.alert("Erro: a data de saída é antes da data de entrada.");
 		}
-	}, [form.dataEntrada, form.dataSaida]);
+	}
+	// }, [form.dataEntrada, form.dataSaida]);
 
 	const handleChange = (event) => {
-		setForm({ ...form, [event.target.name]: [event.target.value] });
+		setForm({ ...form, [event.target.name]: event.target.value });
 	};
 
 	async function handleSubmit(event) {
