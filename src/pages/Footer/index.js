@@ -1,11 +1,15 @@
-import "./style.module.css";
+import "./Footer.css";
 
 function Footer() {
-    return (
-        <>
-
-        </>
-    );
-};
+	return (
+		<>
+			<div className="footer">
+				<p>
+					© VIAMAR • Built with <b>Luiz Felipe Soares Lopes</b> - Developer
+				</p>
+			</div>
+		</>
+	);
+}
 
 export { Footer };

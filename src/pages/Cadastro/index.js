@@ -1,12 +1,11 @@
-import { CadastroClientes } from "../../components/CRUD Cadastro/CadastroClientes";
-import "./style.module.css";
+import { CriarCadastro } from "../../components/CRUD Cadastro/CriarCadastro/index";
 
 function Cadastro() {
-    return (
-        <>
-            <CadastroClientes />
-        </>
-    );
-};
+	return (
+		<>
+			<CriarCadastro />
+		</>
+	);
+}
 
 export { Cadastro };
