@@ -23,98 +23,97 @@ function DetalheCadastro() {
 
 	const formattedDate1 = new Date(form.dataEntrada).toLocaleDateString("pt-BR");
 	const formattedDate2 = new Date(form.dataSaida).toLocaleDateString("pt-BR");
-	const lastIndex = form.updateAt.length - 1;
-	const formattedDate3 = new Date(form.updateAt[lastIndex]).toLocaleDateString(
-		"pt-BR",
-	);
+	const formattedDate3 = new Date(form.createdAt).toLocaleDateString("pt-BR");
 
 	return (
 		<>
 			<form style={{ position: "relative" }}>
-				<h1>Cadastro</h1>
-				<div className="div-unica">
-					<p>Nº de Protocolo:</p>
-					<p>{form._id}</p>
-				</div>
-				<div className="div-unica">
-					<p>Ultima Modificação:</p>
-					<p>{formattedDate3}</p>
+				<h1 style={{marginBottom: "10px"}}>Cadastro</h1>
+				<div className="div-dupla">
+					<div className="div-unica-esquerda">
+						<p>Nº de Protocolo:</p>
+						<p className="paragrafo-test">{form._id}</p>
+					</div>
+					<div className="div-unica-direita">
+						<p>Criado em:</p>
+						<p className="paragrafo-test">{formattedDate3}</p>
+					</div>
 				</div>
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
 						<p htmlFor="empresaOnibus">Nome da Empresa do Ônibus:</p>
-						<p>{form.empresaOnibus}</p>
+						<p className="paragrafo-test">{form.empresaOnibus}</p>
 					</div>
 					<div className="div-unica-direita">
 						<p htmlFor="placaOnibus">Placa do Ônibus:</p>
-						<p>{form.placaOnibus}</p>
+						<p className="paragrafo-test">{form.placaOnibus}</p>
 					</div>
 				</div>
 
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
 						<p htmlFor="nomeMotorista">Nome do Motorista:</p>
-						<p>{form.nomeMotorista}</p>
+						<p className="paragrafo-test">{form.nomeMotorista}</p>
 					</div>
 					<div className="div-unica-direita">
 						<p htmlFor="telefoneMotorista">Telefone do Motorista:</p>
-						<p>{form.telefoneMotorista}</p>
+						<p className="paragrafo-test">{form.telefoneMotorista}</p>
 					</div>
 				</div>
 
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
 						<p htmlFor="nomeExcursionista">Nome do Excursionista:</p>
-						<p>{form.nomeExcursionista}</p>
+						<p className="paragrafo-test">{form.nomeExcursionista}</p>
 					</div>
 					<div className="div-unica-direita">
 						<p htmlFor="telefoneExcursionista">Telefone do Excursionista:</p>
-						<p>{form.telefoneExcursionista}</p>
+						<p className="paragrafo-test">{form.telefoneExcursionista}</p>
 					</div>
 				</div>
 
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
 						<p htmlFor="localOrigem">Local de Origem:</p>
-						<p>{form.localOrigem}</p>
+						<p className="paragrafo-test">{form.localOrigem}</p>
 					</div>
 					<div className="div-unica-direita">
 						<p htmlFor="localDestino">Local de Destino:</p>
-						<p>{form.localDestino}</p>
+						<p className="paragrafo-test">{form.localDestino}</p>
 					</div>
 				</div>
 
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
 						<p htmlFor="horaEntrada">Hora de Entrada:</p>
-						<p>{form.horaEntrada}</p>
+						<p className="paragrafo-test">{form.horaEntrada}</p>
 					</div>
 					<div className="div-unica-direita">
 						<p htmlFor="horaSaida">Hora de Saida:</p>
-						<p>{form.horaSaida}</p>
+						<p className="paragrafo-test">{form.horaSaida}</p>
 					</div>
 				</div>
 
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
 						<p htmlFor="dataEntrada">Data de Entrada:</p>
-						<p>{formattedDate1}</p>
+						<p className="paragrafo-test">{formattedDate1}</p>
 					</div>
 					<div className="div-unica-direita">
 						<p htmlFor="dataSaida">Data de Saída:</p>
-						<p>{formattedDate2}</p>
+						<p className="paragrafo-test">{formattedDate2}</p>
 					</div>
 				</div>
 
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
 						<p htmlFor="localHospedagem">Hospedagem:</p>
-						<p>{form.localHospedagem}</p>
+						<p className="paragrafo-test">{form.localHospedagem}</p>
 					</div>
 
 					<div className="div-unica-direita">
 						<p htmlFor="veiculoUsado">Selecione o Veículo:</p>
-						<p>{form.veiculoUsado}</p>
+						<p className="paragrafo-test">{form.veiculoUsado}</p>
 					</div>
 				</div>
 
