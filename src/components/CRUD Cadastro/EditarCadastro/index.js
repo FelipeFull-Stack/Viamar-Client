@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { api } from "../../../api/api";
 import "./EditarCadastro.css";
 
 function EditarCadastro() {
+	const navigate = useNavigate();
+	const params = useParams();
 	const [form, setForm] = useState({
 		empresaOnibus: "",
 		placaOnibus: "",
@@ -19,6 +23,20 @@ function EditarCadastro() {
 		localDestino: "",
 		veiculoUsado: "",
 	});
+
+	useEffect(() => {
+		async function fetchCadastros() {
+			try {
+				const response = await api.get(`/cadastro/${params.id}`);
+				setForm(response.data);
+			} catch (err) {
+				console.log(
+					`Erro do Front-end em EditarCadastro/fecthCadastro: ${err} `,
+				);
+			}
+		}
+		fetchCadastros();
+	}, []);
 
 	function clearFunction() {
 		setForm({
@@ -60,13 +78,34 @@ function EditarCadastro() {
 	// }, [form.dataEntrada, form.dataSaida]);
 
 	const handleChange = (event) => {
-		setForm({ ...form, [event.target.name]: [event.target.value] });
+		setForm({ ...form, [event.target.name]: event.target.value });
 	};
 
-	const handleSubmit = (event) => {
+	async function handleSubmit(event) {
 		event.preventDefault();
-		console.log(form);
-	};
+		try {
+			await api.put(`/cadastro/${params.id}`, {
+				empresaOnibus: form.empresaOnibus,
+				placaOnibus: form.placaOnibus,
+				nomeMotorista: form.nomeMotorista,
+				telefoneMotorista: form.telefoneMotorista,
+				nomeExcursionista: form.nomeExcursionista,
+				telefoneExcursionista: form.telefoneExcursionista,
+				localHospedagem: form.localHospedagem,
+				dataEntrada: form.dataEntrada,
+				dataSaida: form.dataSaida,
+				quantidadeDias: form.quantidadeDias,
+				horaEntrada: form.horaEntrada,
+				horaSaida: form.horaSaida,
+				localOrigem: form.localOrigem,
+				localDestino: form.localDestino,
+				veiculoUsado: form.veiculoUsado,
+			});
+			navigate("/exibir-cadastros");
+		} catch (err) {
+			console.log(`Erro do Front-end em CriarCadastro/handleSubmit: ${err}`);
+		}
+	}
 
 	return (
 		<>
