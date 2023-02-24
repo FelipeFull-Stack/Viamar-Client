@@ -6,6 +6,7 @@ import { useNavigate, useParams } from "react-router-dom";
 function DetalheCadastro() {
 	const navigate = useNavigate();
 	const params = useParams();
+	console.log(params);
 	const [form, setForm] = useState({});
 
 	useEffect(() => {
@@ -14,7 +15,7 @@ function DetalheCadastro() {
 				const response = await api.get(`/cadastro/${params.id}`);
 				setForm(response.data);
 			} catch (err) {
-				console.log(`Erro do Front-end em DetalheCadastro: ${err}`);
+				console.log(`Erro do Front-end em DetalheCadastro/fetchForm: ${err}`);
 			}
 		}
 		fetchForm();
@@ -22,115 +23,116 @@ function DetalheCadastro() {
 
 	return (
 		<>
-			{form.map((currentElement) => {
-				return (
-					<>
-						<form style={{ position: "relative" }}>
-							<h1>Cadastro</h1>
-							<div className="div-dupla">
-								<div className="div-unica-esquerda">
-									<p htmlFor="empresaOnibus">Nome da Empresa do Ônibus:</p>
-									<p>{currentElement.empresaOnibus}</p>
-								</div>
-								<div className="div-unica-direita">
-									<p htmlFor="placaOnibus">Placa do Ônibus:</p>
-									<p>{currentElement.placaOnibus}</p>
-								</div>
-							</div>
+			<form style={{ position: "relative" }}>
+				<h1>Cadastro</h1>
+				<div className="div-unica">
+					<p>Nº de Protocolo:</p>
+					<p>{form._id}</p>
+				</div>
+				<div className="div-dupla">
+					<div className="div-unica-esquerda">
+						<p htmlFor="empresaOnibus">Nome da Empresa do Ônibus:</p>
+						<p>{form.empresaOnibus}</p>
+					</div>
+					<div className="div-unica-direita">
+						<p htmlFor="placaOnibus">Placa do Ônibus:</p>
+						<p>{form.placaOnibus}</p>
+					</div>
+				</div>
 
-							<hr />
+				<hr />
 
-							<div className="div-dupla">
-								<div className="div-unica-esquerda">
-									<p htmlFor="nomeMotorista">Nome do Motorista:</p>
-									<p>{currentElement.nomeMotorista}</p>
-								</div>
-								<div className="div-unica-direita">
-									<p htmlFor="telefoneMotorista">Telefone do Motorista:</p>
-									<p>{currentElement.telefoneMotorista}</p>
-								</div>
-							</div>
+				<div className="div-dupla">
+					<div className="div-unica-esquerda">
+						<p htmlFor="nomeMotorista">Nome do Motorista:</p>
+						<p>{form.nomeMotorista}</p>
+					</div>
+					<div className="div-unica-direita">
+						<p htmlFor="telefoneMotorista">Telefone do Motorista:</p>
+						<p>{form.telefoneMotorista}</p>
+					</div>
+				</div>
 
-							<hr />
+				<hr />
 
-							<div className="div-dupla">
-								<div className="div-unica-esquerda">
-									<p htmlFor="nomeExcursionista">Nome do Excursionista:</p>
-									<p>{currentElement.nomeExcursionista}</p>
-								</div>
-								<div className="div-unica-direita">
-									<p htmlFor="telefoneExcursionista">
-										Telefone do Excursionista:
-									</p>
-									<p>{currentElement.telefoneExcursionista}</p>
-								</div>
-							</div>
+				<div className="div-dupla">
+					<div className="div-unica-esquerda">
+						<p htmlFor="nomeExcursionista">Nome do Excursionista:</p>
+						<p>{form.nomeExcursionista}</p>
+					</div>
+					<div className="div-unica-direita">
+						<p htmlFor="telefoneExcursionista">Telefone do Excursionista:</p>
+						<p>{form.telefoneExcursionista}</p>
+					</div>
+				</div>
 
-							<hr />
+				<hr />
 
-							<div className="div-dupla">
-								<div className="div-unica-esquerda">
-									<p htmlFor="localOrigem">Local de Origem:</p>
-									<p>{currentElement.localOrigem}</p>
-								</div>
-								<div className="div-unica-direita">
-									<p htmlFor="localDestino">Local de Destino:</p>
-									<p>{currentElement.localDestino}</p>
-								</div>
-							</div>
+				<div className="div-dupla">
+					<div className="div-unica-esquerda">
+						<p htmlFor="localOrigem">Local de Origem:</p>
+						<p>{form.localOrigem}</p>
+					</div>
+					<div className="div-unica-direita">
+						<p htmlFor="localDestino">Local de Destino:</p>
+						<p>{form.localDestino}</p>
+					</div>
+				</div>
 
-							<hr />
+				<hr />
 
-							<div className="div-dupla">
-								<div className="div-unica-esquerda">
-									<p htmlFor="horaEntrada">Hora de Entrada:</p>
-									<p>{currentElement.horaEntrada}</p>
-								</div>
-								<div className="div-unica-direita">
-									<p htmlFor="horaSaida">Hora de Saida:</p>
-									<p>{currentElement.horaSaida}</p>
-								</div>
-							</div>
+				<div className="div-dupla">
+					<div className="div-unica-esquerda">
+						<p htmlFor="horaEntrada">Hora de Entrada:</p>
+						<p>{form.horaEntrada}</p>
+					</div>
+					<div className="div-unica-direita">
+						<p htmlFor="horaSaida">Hora de Saida:</p>
+						<p>{form.horaSaida}</p>
+					</div>
+				</div>
 
-							<hr />
+				<hr />
 
-							<div className="div-dupla">
-								<div className="div-unica-esquerda">
-									<p htmlFor="dataEntrada">Data de Entrada:</p>
-									<p>{currentElement.dataEntrada}</p>
-								</div>
-								<div className="div-unica-direita">
-									<p htmlFor="dataSaida">Data de Saída:</p>
-									<p>{currentElement.dataSaida}</p>
-								</div>
-							</div>
+				<div className="div-dupla">
+					<div className="div-unica-esquerda">
+						<p htmlFor="dataEntrada">Data de Entrada:</p>
+						<p>{form.dataEntrada}</p>
+					</div>
+					<div className="div-unica-direita">
+						<p htmlFor="dataSaida">Data de Saída:</p>
+						<p>{form.dataSaida}</p>
+					</div>
+				</div>
 
-							<hr />
+				<hr />
 
-							<div className="div-unica">
-								<p htmlFor="localHospedagem">Hospedagem:</p>
-								<p>{currentElement.localHospedagem}</p>
-							</div>
+				<div className="div-unica">
+					<p htmlFor="localHospedagem">Hospedagem:</p>
+					<p>{form.localHospedagem}</p>
+				</div>
 
-							<div className="div-unica">
-								<p htmlFor="veiculoUsado">Selecione o Veículo:</p>
-								<p>{currentElement.veiculoUsado}</p>
-							</div>
+				<div className="div-unica">
+					<p htmlFor="veiculoUsado">Selecione o Veículo:</p>
+					<p>{form.veiculoUsado}</p>
+				</div>
 
-							<hr />
+				<hr />
 
-							<div className="div-button">
-								<button className="btn1 button-cadastro" type="button" onClick={() => {navigate(`/editar-cadastro/${params.currentElement._id}`)}}>
-									Editar
-								</button>
-								<button className="btn2 button-cadastro" type="button">
-									Deletar
-								</button>
-							</div>
-						</form>
-					</>
-				);
-			})}
+				<div className="div-button">
+					<button
+						className="btn1 button-cadastro"
+						type="button"
+						onClick={() => {
+							navigate(`/editar-cadastro/${params.currentElement._id}`);
+						}}>
+						Editar
+					</button>
+					<button className="btn2 button-cadastro" type="button">
+						Deletar
+					</button>
+				</div>
+			</form>
 		</>
 	);
 }
