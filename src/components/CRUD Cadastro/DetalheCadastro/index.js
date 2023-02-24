@@ -11,7 +11,7 @@ function DetalheCadastro() {
 	useEffect(() => {
 		async function fetchForm() {
 			try {
-				const response = await api.get(`/cadastro/${params._id}`);
+				const response = await api.get(`/cadastro/${params.id}`);
 				setForm(response.data);
 			} catch (err) {
 				console.log(`Erro do Front-end em DetalheCadastro: ${err}`);
@@ -120,7 +120,7 @@ function DetalheCadastro() {
 							<hr />
 
 							<div className="div-button">
-								<button className="btn1 button-cadastro" type="button" onClick={() => {navigate("/edit")}}>
+								<button className="btn1 button-cadastro" type="button" onClick={() => {navigate(`/editar-cadastro/${params.currentElement._id}`)}}>
 									Editar
 								</button>
 								<button className="btn2 button-cadastro" type="button">
