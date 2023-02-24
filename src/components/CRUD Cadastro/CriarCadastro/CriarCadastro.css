@@ -61,6 +61,7 @@
 		display: flex;
 		justify-content: space-around;
 		width: 300px;
+		gap: 10px;
 	}
 	.btn1 {
 		padding: 8px 16px;
@@ -241,6 +242,7 @@
 		display: flex;
 		justify-content: space-around;
 		width: 35%;
+		gap: 10px;
 	}
 
 	.btn1 {
@@ -422,6 +424,7 @@
 		display: flex;
 		justify-content: space-around;
 		width: 50%;
+		gap: 10px;
 	}
 	.btn1 {
 		padding: 8px 16px;

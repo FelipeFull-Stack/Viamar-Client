@@ -61,14 +61,63 @@
 		display: flex;
 		justify-content: space-around;
 		width: 300px;
+        gap: 10px;
+	}
+	.btn1 {
+		padding: 8px 16px;
+		background-color: #007bff;
+		color: #fff;
+		border: none;
+		border-radius: 4px;
+		font-size: 16px;
+		cursor: pointer;
+		width: 40%;
+		margin: 0 auto;
+		display: block;
+		margin-top: 25px;
+		margin-bottom: 50px;
 	}
 
+	.btn1:hover {
+		background-color: #00ff2a;
+	}
 	.btn2 {
 		background-color: gray;
 		transition: background-color 0.2s ease;
+		padding: 8px 16px;
+		color: #fff;
+		border: none;
+		border-radius: 4px;
+		font-size: 16px;
+		cursor: pointer;
+		width: 40%;
+		margin: 0 auto;
+		display: block;
+		margin-top: 25px;
+		margin-bottom: 50px;
 	}
 	.btn2:hover {
+		background-color: rgb(255, 255, 0);
+	}
+
+	.btn3 {
+		background-color: rgb(175, 0, 0);
+		transition: transform 0.5s ease;
+		padding: 8px 16px;
+		color: #fff;
+		border: none;
+		border-radius: 4px;
+		font-size: 16px;
+		cursor: pointer;
+		width: 40%;
+		margin: 0 auto;
+		display: block;
+		margin-top: 25px;
+		margin-bottom: 50px;
+	}
+	.btn3:hover {
 		background-color: red;
+		transform: scale(1.05);
 	}
 
 	label {
@@ -107,25 +156,6 @@
 	select:focus {
 		background-color: #c4e4ff; /* adicionado para destacar o input ativo */
 		text-align: center;
-	}
-
-	.button-cadastro {
-		padding: 8px 16px;
-		background-color: #007bff;
-		color: #fff;
-		border: none;
-		border-radius: 4px;
-		font-size: 16px;
-		cursor: pointer;
-		width: 40%;
-		margin: 0 auto;
-		display: block;
-		margin-top: 25px;
-		margin-bottom: 50px;
-	}
-
-	.button-cadastro:hover {
-		background-color: #00ff2a;
 	}
 
 	/* Adicionado pseudo-elemento */
@@ -232,14 +262,63 @@
 		display: flex;
 		justify-content: space-around;
 		width: 35%;
+        gap: 10px;
+	}
+	.btn1 {
+		padding: 8px 16px;
+		background-color: #007bff;
+		color: #fff;
+		border: none;
+		border-radius: 4px;
+		font-size: 16px;
+		cursor: pointer;
+		width: 40%;
+		margin: 0 auto;
+		display: block;
+		margin-top: 25px;
+		margin-bottom: 50px;
 	}
 
+	.btn1:hover {
+		background-color: #00ff2a;
+	}
 	.btn2 {
 		background-color: gray;
 		transition: background-color 0.2s ease;
+		padding: 8px 16px;
+		color: #fff;
+		border: none;
+		border-radius: 4px;
+		font-size: 16px;
+		cursor: pointer;
+		width: 40%;
+		margin: 0 auto;
+		display: block;
+		margin-top: 25px;
+		margin-bottom: 50px;
 	}
 	.btn2:hover {
+		background-color: rgb(255, 255, 0);
+	}
+
+	.btn3 {
+		background-color: rgb(175, 0, 0);
+		transition: transform 0.5s ease;
+		padding: 8px 16px;
+		color: #fff;
+		border: none;
+		border-radius: 4px;
+		font-size: 16px;
+		cursor: pointer;
+		width: 40%;
+		margin: 0 auto;
+		display: block;
+		margin-top: 25px;
+		margin-bottom: 50px;
+	}
+	.btn3:hover {
 		background-color: red;
+		transform: scale(1.05);
 	}
 
 	label {
@@ -277,25 +356,6 @@
 	select:focus {
 		background-color: #c4e4ff; /* adicionado para destacar o input ativo */
 		text-align: center;
-	}
-
-	.button-cadastro {
-		padding: 8px 16px;
-		background-color: #007bff;
-		color: #fff;
-		border: none;
-		border-radius: 4px;
-		font-size: 16px;
-		cursor: pointer;
-		width: 40%;
-		margin: 0 auto;
-		display: block;
-		margin-top: 25px;
-		margin-bottom: 50px;
-	}
-
-	.button-cadastro:hover {
-		background-color: #00ff2a;
 	}
 
 	/* Adicionado pseudo-elemento */
@@ -403,14 +463,63 @@
 		display: flex;
 		justify-content: space-around;
 		width: 50%;
+        gap: 10px;
+	}
+	.btn1 {
+		padding: 8px 16px;
+		background-color: #007bff;
+		color: #fff;
+		border: none;
+		border-radius: 4px;
+		font-size: 16px;
+		cursor: pointer;
+		width: 40%;
+		margin: 0 auto;
+		display: block;
+		margin-top: 25px;
+		margin-bottom: 50px;
 	}
 
+	.btn1:hover {
+		background-color: #00ff2a;
+	}
 	.btn2 {
 		background-color: gray;
 		transition: background-color 0.2s ease;
+		padding: 8px 16px;
+		color: #fff;
+		border: none;
+		border-radius: 4px;
+		font-size: 16px;
+		cursor: pointer;
+		width: 40%;
+		margin: 0 auto;
+		display: block;
+		margin-top: 25px;
+		margin-bottom: 50px;
 	}
 	.btn2:hover {
+		background-color: rgb(235, 235, 0);
+	}
+
+	.btn3 {
+		background-color: rgb(175, 0, 0);
+		transition: transform 0.5s ease;
+		padding: 8px 16px;
+		color: #fff;
+		border: none;
+		border-radius: 4px;
+		font-size: 16px;
+		cursor: pointer;
+		width: 40%;
+		margin: 0 auto;
+		display: block;
+		margin-top: 25px;
+		margin-bottom: 50px;
+	}
+	.btn3:hover {
 		background-color: red;
+		transform: scale(1.05);
 	}
 
 	label {
@@ -448,25 +557,6 @@
 	select:focus {
 		background-color: #c4e4ff; /* adicionado para destacar o input ativo */
 		text-align: center;
-	}
-
-	.button-cadastro {
-		padding: 8px 16px;
-		background-color: #007bff;
-		color: #fff;
-		border: none;
-		border-radius: 4px;
-		font-size: 16px;
-		cursor: pointer;
-		width: 40%;
-		margin: 0 auto;
-		display: block;
-		margin-top: 25px;
-		margin-bottom: 50px;
-	}
-
-	.button-cadastro:hover {
-		background-color: #00ff2a;
 	}
 
 	/* Adicionado pseudo-elemento */

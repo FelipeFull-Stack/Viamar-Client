@@ -126,14 +126,14 @@ function DetalheCadastro() {
 
 				<div className="div-button">
 					<button
-						className="btn1 button-cadastro"
+						className="btn1"
 						type="button"
 						onClick={() => {
 							navigate(`/editar-cadastro/${params.id}`);
 						}}>
 						Editar
 					</button>
-					<button className="btn2 button-cadastro" type="button">
+					<button className="btn3" type="button">
 						Deletar
 					</button>
 				</div>
