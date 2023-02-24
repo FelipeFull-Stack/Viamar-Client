@@ -68,3 +68,232 @@
 		background-color: #24ff65;
 	}
 }
+
+@media (max-width: 999px) and (min-width: 650px) {
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	.div-geral-exibircadastros {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 7.5%;
+	}
+
+	.div-map-cadastros {
+		padding: 7.5px;
+		width: 60%;
+		height: auto;
+		border: 2px solid black;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: space-around;
+		align-items: center;
+		gap: 5px;
+		background-color: rgb(248, 248, 248);
+		transition: transform 0.3s ease;
+	}
+	.div-map-cadastros:hover {
+		transform: scale(1.05);
+	}
+	.div-map-cadastros h2 {
+		font-size: 1rem;
+		color: black;
+	}
+	.div-dupla-cadastro {
+		width: 94%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 10px;
+	}
+	.div-unica-cadastro {
+		width: 96%;
+		border-bottom: 2px solid black;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+		padding: 10px;
+		font-size: 0.85rem;
+	}
+	.div-button-ver {
+		height: 40px;
+		width: 25%;
+		margin: 5px
+	}
+	.button-ver {
+		height: 100%;
+		width: 100%;
+		border: none;
+		border-radius: 25px;
+		font-weight: 700;
+		background-color: rgb(160, 160, 160);
+	}
+	.button-ver:hover {
+		background-color: #24ff65;
+	}
+}
+
+@media (max-width: 649px) and (min-width: 400px) {
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	.div-geral-exibircadastros {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 7.5%;
+	}
+
+	.div-map-cadastros {
+		padding: 5px;
+		width: 60%;
+		height: auto;
+		border: 2px solid black;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: space-around;
+		align-items: center;
+		gap: 8px;
+		background-color: rgb(248, 248, 248);
+		transition: transform 0.3s ease;
+	}
+	.div-map-cadastros:hover {
+		transform: scale(1.05);
+	}
+	.div-map-cadastros h2 {
+		font-size: 1rem;
+		color: black;
+	}
+	.div-dupla-cadastro {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 15px;
+		border-radius: 10px;
+	}
+	.div-unica-cadastro {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 5px;
+		padding: 5px;
+		font-size: 0.85rem;
+		border-bottom: 2px solid black;
+	}
+	.div-button-ver {
+		height: 40px;
+		width: 30%;
+	}
+	.button-ver {
+		height: 100%;
+		width: 100%;
+		border: none;
+		border-radius: 25px;
+		font-weight: 700;
+		background-color: rgb(160, 160, 160);
+	}
+	.button-ver:hover {
+		background-color: #24ff65;
+	}
+}
+
+@media (max-width: 399px) and (min-width: 1px) {
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	.div-geral-exibircadastros {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 7.5%;
+	}
+
+	.div-map-cadastros {
+		padding: 5px;
+		width: 60%;
+		height: auto;
+		border: 2px solid black;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: space-around;
+		align-items: center;
+		gap: 8px;
+		background-color: rgb(248, 248, 248);
+		transition: transform 0.3s ease;
+	}
+	.div-map-cadastros:hover {
+		transform: scale(1.05);
+	}
+	.div-map-cadastros h2 {
+		font-size: 1rem;
+		color: black;
+	}
+	.div-dupla-cadastro {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 15px;
+		border-radius: 10px;
+	}
+	.div-unica-cadastro {
+		width: 98%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 5px;
+		padding: 5px;
+		font-size: 0.70rem;
+		border-bottom: 2px solid black;
+	}
+	.div-unica-cadastro h2 {
+		font-size: 0.75rem;
+	}
+	.div-button-ver {
+		height: 34px;
+		width: 30%;
+	}
+	.button-ver {
+		height: 100%;
+		width: 100%;
+		border: none;
+		border-radius: 25px;
+		font-weight: 700;
+		background-color: rgb(160, 160, 160);
+	}
+	.button-ver:hover {
+		background-color: #24ff65;
+	}
+	.h1-personalizado {
+		font-size: 1.1rem;
+		font-weight: 900;
+	}
+}

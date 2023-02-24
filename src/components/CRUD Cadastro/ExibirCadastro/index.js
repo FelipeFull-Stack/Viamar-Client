@@ -23,7 +23,7 @@ function ExibirCadastro() {
 	return (
 		<>
 			<div className="div-geral-exibircadastros">
-				<h1>Lista de Cadastros</h1>
+				<h1 style={{marginBottom: "20px"}} className="h1-personalizado">Lista de Cadastros</h1>
 				{cadastros.map((currentElement) => {
 					const formattedDate = new Date(
 						currentElement.createdAt,
