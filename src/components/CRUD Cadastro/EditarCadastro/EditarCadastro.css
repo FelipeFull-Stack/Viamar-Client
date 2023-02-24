@@ -39,21 +39,22 @@
 	}
 
 	.div-unica {
-		width: 500px;
+		margin: 5px;
+		width: 55%;
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		align-items: center;
-		justify-content: baseline;
+		justify-content: space-between;
 		transition: transform 0.3s ease;
 	}
 	.div-unica:hover {
 		transform: scale(1.075);
 	}
 	.div-unica input {
-		width: 500px;
+		width: 50%;
 	}
 	.div-unica select {
-		width: 500px;
+		width: 52%;
 		text-align: center;
 	}
 
@@ -120,6 +121,7 @@
 		border: 1px solid #ccc;
 		border-radius: 4px;
 		font-size: 14px;
+		text-align: center;
 		margin-top: 8px;
 		height: 20px;
 		background-color: #e4f2ff; /* adicionado para contraste azulado */
@@ -304,6 +306,7 @@
 		font-size: 14px;
 		margin-top: 8px;
 		height: 20px;
+		text-align: center;
 		background-color: #e4f2ff; /* adicionado para contraste azulado */
 	}
 
@@ -486,6 +489,7 @@
 		font-size: 14px;
 		margin-top: 8px;
 		height: 20px;
+		text-align: center;
 		background-color: #e4f2ff; /* adicionado para contraste azulado */
 	}
 

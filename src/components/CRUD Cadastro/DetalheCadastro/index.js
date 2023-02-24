@@ -23,6 +23,10 @@ function DetalheCadastro() {
 
 	const formattedDate1 = new Date(form.dataEntrada).toLocaleDateString("pt-BR");
 	const formattedDate2 = new Date(form.dataSaida).toLocaleDateString("pt-BR");
+	const lastIndex = form.updateAt.length - 1;
+	const formattedDate3 = new Date(form.updateAt[lastIndex]).toLocaleDateString(
+		"pt-BR",
+	);
 
 	return (
 		<>
@@ -31,6 +35,10 @@ function DetalheCadastro() {
 				<div className="div-unica">
 					<p>Nº de Protocolo:</p>
 					<p>{form._id}</p>
+				</div>
+				<div className="div-unica">
+					<p>Ultima Modificação:</p>
+					<p>{formattedDate3}</p>
 				</div>
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
@@ -43,8 +51,6 @@ function DetalheCadastro() {
 					</div>
 				</div>
 
-				<hr />
-
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
 						<p htmlFor="nomeMotorista">Nome do Motorista:</p>
@@ -55,8 +61,6 @@ function DetalheCadastro() {
 						<p>{form.telefoneMotorista}</p>
 					</div>
 				</div>
-
-				<hr />
 
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
@@ -69,8 +73,6 @@ function DetalheCadastro() {
 					</div>
 				</div>
 
-				<hr />
-
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
 						<p htmlFor="localOrigem">Local de Origem:</p>
@@ -81,8 +83,6 @@ function DetalheCadastro() {
 						<p>{form.localDestino}</p>
 					</div>
 				</div>
-
-				<hr />
 
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
@@ -95,8 +95,6 @@ function DetalheCadastro() {
 					</div>
 				</div>
 
-				<hr />
-
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
 						<p htmlFor="dataEntrada">Data de Entrada:</p>
@@ -107,8 +105,6 @@ function DetalheCadastro() {
 						<p>{formattedDate2}</p>
 					</div>
 				</div>
-
-				<hr />
 
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
@@ -121,8 +117,6 @@ function DetalheCadastro() {
 						<p>{form.veiculoUsado}</p>
 					</div>
 				</div>
-
-				<hr />
 
 				<div className="div-button">
 					<button
