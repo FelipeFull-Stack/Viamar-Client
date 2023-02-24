@@ -35,7 +35,7 @@ function Menubar() {
 		<>
 			<div className="div-geral-menubar">
 				<div className="div-logo">
-					<h1>Logo Aqui</h1>
+					<h1> </h1>
 				</div>
 
 				<ul className="div-todos-buttons">
@@ -60,7 +60,7 @@ function Menubar() {
 							onClick={() => {
 								navigate("/exibir-cadastros");
 							}}>
-							Cadastros
+							Reservas
 						</button>
 					</li>
 					<li>
