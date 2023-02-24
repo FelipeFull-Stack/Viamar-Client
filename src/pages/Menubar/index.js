@@ -1,6 +1,7 @@
 import "./Menubar.css";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
+import { AuthContext } from "../../context/authContext";
 
 import menu from "../../images/menuhamburguer.png";
 
@@ -8,6 +9,7 @@ function Menubar() {
 	const navigate = useNavigate();
 	const [isExpanded, setIsExpanded] = useState(false);
 	const ref = useRef(null);
+	const { setLoggedInUser } = useContext(AuthContext);
 
 	useEffect(() => {
 		const handleClickOutside = (event) => {
@@ -22,6 +24,12 @@ function Menubar() {
 			document.removeEventListener("mousedown", handleClickOutside);
 		};
 	}, [ref]);
+
+	function handleLogOut() {
+		localStorage.removeItem("loggedInUser");
+		setLoggedInUser(null);
+		navigate("/login");
+	}
 
 	return (
 		<>
@@ -54,6 +62,9 @@ function Menubar() {
 							}}>
 							Cadastros
 						</button>
+					</li>
+					<li>
+						<button onClick={handleLogOut}>Logout</button>
 					</li>
 				</ul>
 			</div>
@@ -94,6 +105,12 @@ function Menubar() {
 									navigate("/exibir-cadastros");
 								}}>
 								Cadastros
+							</button>
+							<button
+								onClick={() => {
+									navigate("/cadastro");
+								}}>
+								Logout
 							</button>
 						</div>
 					)}

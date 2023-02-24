@@ -17,7 +17,7 @@ function App() {
 			<AuthContextComponent>
 				<Menubar />
 				<Routes>
-					<Route path="/" element={<Home />} />
+					<Route path="/" element={<LogIn />} />
 					<Route path="/cadastro" element={<Cadastro />} />
 					<Route path="/exibir-cadastros" element={<ExibirCadastros />} />
 					<Route path="/detalhe-cadastro/:id" element={<DetalheCadastro />} />

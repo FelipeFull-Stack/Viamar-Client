@@ -26,7 +26,7 @@ function LogIn() {
 			const response = await api.post("/user/login", form);
 			setLoggedInUser(response.data);
 			localStorage.setItem("loggedInUser", JSON.stringify(response.data));
-			navigate("/home");
+			navigate("/exibir-cadastros");
 		} catch (err) {
 			console.log(`Erro do Front-end em LogIn(handleSubmit): ${err}`);
 		}
@@ -46,6 +46,7 @@ function LogIn() {
 									name="email"
 									value={form.email}
 									onChange={handleChange}
+									style={{textAlign: "justify"}}
 								/>
 							</div>
 							<div>
@@ -56,6 +57,7 @@ function LogIn() {
 									name="password"
 									value={form.password}
 									onChange={handleChange}
+									style={{textAlign: "justify"}}
 								/>
 							</div>
 							<div>

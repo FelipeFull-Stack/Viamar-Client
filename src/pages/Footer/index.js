@@ -5,7 +5,7 @@ function Footer() {
 		<>
 			<div className="footer">
 				<p>
-					© VIAMAR • Built with <b>Luiz Felipe Soares Lopes</b> - Developer
+					© Estacionamento ViaMar • Built with <b>Luiz Felipe Soares Lopes</b> - Developer
 				</p>
 			</div>
 		</>
