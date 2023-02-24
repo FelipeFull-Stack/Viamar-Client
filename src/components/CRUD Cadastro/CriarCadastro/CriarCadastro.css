@@ -7,7 +7,22 @@
 		margin: 0 auto;
 		position: relative; /* Adicionado para o posicionamento do pseudo-elemento */
 	}
-
+	.div-unica-criarformulario {
+		width: 90%;
+		display: flex;
+		font-size: 1rem;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.div-unica-criarformulario,
+	input,
+	select {
+		width: 75%;
+	}
+	.div-unica-criarformulario:hover {
+		transform: scale(1.045);
+	}
 	.div-dupla {
 		padding-top: 10px;
 		padding-bottom: 10px;
@@ -177,7 +192,22 @@
 		margin: 0 auto;
 		position: relative; /* Adicionado para o posicionamento do pseudo-elemento */
 	}
-
+	.div-unica-criarformulario {
+		width: 90%;
+		display: flex;
+		font-size: 1rem;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.div-unica-criarformulario,
+	input,
+	select {
+		width: 80%;
+	}
+	.div-unica-criarformulario:hover {
+		transform: scale(1.045);
+	}
 	.div-dupla {
 		padding-top: 10px;
 		padding-bottom: 10px;
@@ -292,7 +322,7 @@
 
 	h1 {
 		display: flex;
-		font-size: 60px;
+		font-size: 1.5rem;
 		justify-content: center;
 	}
 
@@ -359,6 +389,20 @@
 		margin: 0 auto;
 		position: relative; /* Adicionado para o posicionamento do pseudo-elemento */
 	}
+	.div-unica-criarformulario {
+		width: 90%;
+		display: flex;
+		font-size: 1rem;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.div-unica-criarformulario, input, select{
+		width: 90%;
+	}
+	.div-unica-criarformulario:hover {
+		transform: scale(1.0450)
+	}
 
 	.div-dupla {
 		padding-top: 10px;
@@ -424,7 +468,7 @@
 	.div-button {
 		display: flex;
 		justify-content: space-around;
-		width: 50%;
+		width: 55%;
 		gap: 10px;
 	}
 	.btn1 {
@@ -435,7 +479,7 @@
 		border-radius: 4px;
 		font-size: 16px;
 		cursor: pointer;
-		width: 40%;
+		width: 44%;
 		margin: 0 auto;
 		display: block;
 		margin-top: 25px;
@@ -454,7 +498,7 @@
 		border-radius: 4px;
 		font-size: 16px;
 		cursor: pointer;
-		width: 40%;
+		width: 44%;
 		margin: 0 auto;
 		display: block;
 		margin-top: 25px;
@@ -473,7 +517,7 @@
 
 	h1 {
 		display: flex;
-		font-size: 60px;
+		font-size: 1.5rem;
 		justify-content: center;
 	}
 

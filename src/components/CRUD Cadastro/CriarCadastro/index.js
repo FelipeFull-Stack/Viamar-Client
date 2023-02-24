@@ -78,172 +78,149 @@ function CriarCadastro() {
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<h1>Formulário de Cadastro</h1>
-			<div className="div-dupla">
-				<div className="div-unica-esquerda">
-					<label htmlFor="empresaOnibus">Nome da Empresa do Ônibus:</label>
-					<input
-						type="text"
-						id="empresaOnibus"
-						name="empresaOnibus"
-						value={form.empresaOnibus}
-						onChange={handleChange}
-						required
-					/>
-				</div>
-				<div className="div-unica-direita">
-					<label htmlFor="placaOnibus">Placa do Ônibus:</label>
-					<input
-						type="text"
-						id="placaOnibus"
-						name="placaOnibus"
-						value={form.placaOnibus}
-						onChange={handleChange}
-						required
-					/>
-				</div>
+			<h1 style={{ marginBottom: "10px" }}>Formulário de Cadastro</h1>
+
+			<div className="div-unica-criarformulario">
+				<label htmlFor="empresaOnibus">Nome da Empresa do Ônibus:</label>
+				<input
+					type="text"
+					id="empresaOnibus"
+					name="empresaOnibus"
+					value={form.empresaOnibus}
+					onChange={handleChange}
+					required
+				/>
+			</div>
+			<div className="div-unica-criarformulario">
+				<label htmlFor="placaOnibus">Placa do Ônibus:</label>
+				<input
+					type="text"
+					id="placaOnibus"
+					name="placaOnibus"
+					value={form.placaOnibus}
+					onChange={handleChange}
+					required
+				/>
 			</div>
 
-			<hr />
-
-			<div className="div-dupla">
-				<div className="div-unica-esquerda">
-					<label htmlFor="nomeMotorista">Nome do Motorista:</label>
-					<input
-						type="text"
-						id="nomeMotorista"
-						name="nomeMotorista"
-						value={form.nomeMotorista}
-						onChange={handleChange}
-						required
-					/>
-				</div>
-				<div className="div-unica-direita">
-					<label htmlFor="telefoneMotorista">Telefone do Motorista:</label>
-					<input
-						type="text"
-						id="telefoneMotorista"
-						name="telefoneMotorista"
-						value={form.telefoneMotorista}
-						onChange={handleChange}
-						required
-					/>
-				</div>
+			<div className="div-unica-criarformulario">
+				<label htmlFor="nomeMotorista">Nome do Motorista:</label>
+				<input
+					type="text"
+					id="nomeMotorista"
+					name="nomeMotorista"
+					value={form.nomeMotorista}
+					onChange={handleChange}
+					required
+				/>
+			</div>
+			<div className="div-unica-criarformulario">
+				<label htmlFor="telefoneMotorista">Telefone do Motorista:</label>
+				<input
+					type="text"
+					id="telefoneMotorista"
+					name="telefoneMotorista"
+					value={form.telefoneMotorista}
+					onChange={handleChange}
+					required
+				/>
 			</div>
 
-			<hr />
-
-			<div className="div-dupla">
-				<div className="div-unica-esquerda">
-					<label htmlFor="nomeExcursionista">Nome do Excursionista:</label>
-					<input
-						type="text"
-						id="nomeExcursionista"
-						name="nomeExcursionista"
-						value={form.nomeExcursionista}
-						onChange={handleChange}
-						required
-					/>
-				</div>
-				<div className="div-unica-direita">
-					<label htmlFor="telefoneExcursionista">
-						Telefone do Excursionista:
-					</label>
-					<input
-						type="text"
-						id="telefoneExcursionista"
-						name="telefoneExcursionista"
-						value={form.telefoneExcursionista}
-						onChange={handleChange}
-						required
-					/>
-				</div>
+			<div className="div-unica-criarformulario">
+				<label htmlFor="nomeExcursionista">Nome do Excursionista:</label>
+				<input
+					type="text"
+					id="nomeExcursionista"
+					name="nomeExcursionista"
+					value={form.nomeExcursionista}
+					onChange={handleChange}
+					required
+				/>
+			</div>
+			<div className="div-unica-criarformulario">
+				<label htmlFor="telefoneExcursionista">
+					Telefone do Excursionista:
+				</label>
+				<input
+					type="text"
+					id="telefoneExcursionista"
+					name="telefoneExcursionista"
+					value={form.telefoneExcursionista}
+					onChange={handleChange}
+					required
+				/>
 			</div>
 
-			<hr />
-
-			<div className="div-dupla">
-				<div className="div-unica-esquerda">
-					<label htmlFor="localOrigem">Local de Origem:</label>
-					<input
-						type="text"
-						id="localOrigem"
-						name="localOrigem"
-						value={form.localOrigem}
-						onChange={handleChange}
-						required
-					/>
-				</div>
-				<div className="div-unica-direita">
-					<label htmlFor="localDestino">Local de Destino:</label>
-					<input
-						type="text"
-						id="localDestino"
-						name="localDestino"
-						value={form.localDestino}
-						onChange={handleChange}
-						required
-					/>
-				</div>
+			<div className="div-unica-criarformulario">
+				<label htmlFor="localOrigem">Local de Origem:</label>
+				<input
+					type="text"
+					id="localOrigem"
+					name="localOrigem"
+					value={form.localOrigem}
+					onChange={handleChange}
+					required
+				/>
+			</div>
+			<div className="div-unica-criarformulario">
+				<label htmlFor="localDestino">Local de Destino:</label>
+				<input
+					type="text"
+					id="localDestino"
+					name="localDestino"
+					value={form.localDestino}
+					onChange={handleChange}
+					required
+				/>
 			</div>
 
-			<hr />
-
-			<div className="div-dupla">
-				<div className="div-unica-esquerda">
-					<label htmlFor="horaEntrada">Hora de Entrada:</label>
-					<input
-						type="number"
-						id="horaEntrada"
-						name="horaEntrada"
-						value={form.horaEntrada}
-						onChange={handleChange}
-						required
-					/>
-				</div>
-				<div className="div-unica-direita">
-					<label htmlFor="horaSaida">Hora de Saida:</label>
-					<input
-						type="number"
-						id="horaSaida"
-						name="horaSaida"
-						value={form.horaSaida}
-						onChange={handleChange}
-						required
-					/>
-				</div>
+			<div className="div-unica-criarformulario">
+				<label htmlFor="horaEntrada">Hora de Entrada:</label>
+				<input
+					type="number"
+					id="horaEntrada"
+					name="horaEntrada"
+					value={form.horaEntrada}
+					onChange={handleChange}
+					required
+				/>
+			</div>
+			<div className="div-unica-criarformulario">
+				<label htmlFor="horaSaida">Hora de Saida:</label>
+				<input
+					type="number"
+					id="horaSaida"
+					name="horaSaida"
+					value={form.horaSaida}
+					onChange={handleChange}
+					required
+				/>
 			</div>
 
-			<hr />
-
-			<div className="div-dupla">
-				<div className="div-unica-esquerda">
-					<label htmlFor="dataEntrada">Data de Entrada:</label>
-					<input
-						type="date"
-						id="dataEntrada"
-						name="dataEntrada"
-						value={form.dataEntrada}
-						onChange={handleChange}
-						required
-					/>
-				</div>
-				<div className="div-unica-direita">
-					<label htmlFor="dataSaida">Data de Saída:</label>
-					<input
-						type="date"
-						id="dataSaida"
-						name="dataSaida"
-						value={form.dataSaida}
-						onChange={handleChange}
-						required
-					/>
-				</div>
+			<div className="div-unica-criarformulario">
+				<label htmlFor="dataEntrada">Data de Entrada:</label>
+				<input
+					type="date"
+					id="dataEntrada"
+					name="dataEntrada"
+					value={form.dataEntrada}
+					onChange={handleChange}
+					required
+				/>
+			</div>
+			<div className="div-unica-criarformulario">
+				<label htmlFor="dataSaida">Data de Saída:</label>
+				<input
+					type="date"
+					id="dataSaida"
+					name="dataSaida"
+					value={form.dataSaida}
+					onChange={handleChange}
+					required
+				/>
 			</div>
 
-			<hr />
-
-			<div className="div-unica">
+			<div className="div-unica-criarformulario">
 				<label htmlFor="localHospedagem">Hospedagem:</label>
 				<input
 					type="text"
@@ -255,7 +232,7 @@ function CriarCadastro() {
 				/>
 			</div>
 
-			<div className="div-unica">
+			<div className="div-unica-criarformulario">
 				<label htmlFor="veiculoUsado">Selecione o Veículo:</label>
 				<select
 					type="select"
@@ -270,8 +247,6 @@ function CriarCadastro() {
 					<option value="MINIVAN">Mini-Van</option>
 				</select>
 			</div>
-
-			<hr />
 
 			<div className="div-button">
 				<button className="btn1" type="submit">
