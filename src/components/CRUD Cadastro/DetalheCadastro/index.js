@@ -19,7 +19,10 @@ function DetalheCadastro() {
 			}
 		}
 		fetchForm();
-	}, []);
+	}, [params.id]);
+
+	const formattedDate1 = new Date(form.dataEntrada).toLocaleDateString("pt-BR");
+	const formattedDate2 = new Date(form.dataSaida).toLocaleDateString("pt-BR");
 
 	return (
 		<>
@@ -97,24 +100,26 @@ function DetalheCadastro() {
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
 						<p htmlFor="dataEntrada">Data de Entrada:</p>
-						<p>{form.dataEntrada}</p>
+						<p>{formattedDate1}</p>
 					</div>
 					<div className="div-unica-direita">
 						<p htmlFor="dataSaida">Data de Saída:</p>
-						<p>{form.dataSaida}</p>
+						<p>{formattedDate2}</p>
 					</div>
 				</div>
 
 				<hr />
 
-				<div className="div-unica">
-					<p htmlFor="localHospedagem">Hospedagem:</p>
-					<p>{form.localHospedagem}</p>
-				</div>
+				<div className="div-dupla">
+					<div className="div-unica-esquerda">
+						<p htmlFor="localHospedagem">Hospedagem:</p>
+						<p>{form.localHospedagem}</p>
+					</div>
 
-				<div className="div-unica">
-					<p htmlFor="veiculoUsado">Selecione o Veículo:</p>
-					<p>{form.veiculoUsado}</p>
+					<div className="div-unica-direita">
+						<p htmlFor="veiculoUsado">Selecione o Veículo:</p>
+						<p>{form.veiculoUsado}</p>
+					</div>
 				</div>
 
 				<hr />
@@ -124,7 +129,7 @@ function DetalheCadastro() {
 						className="btn1 button-cadastro"
 						type="button"
 						onClick={() => {
-							navigate(`/editar-cadastro/${params.currentElement._id}`);
+							navigate(`/editar-cadastro/${params.id}`);
 						}}>
 						Editar
 					</button>

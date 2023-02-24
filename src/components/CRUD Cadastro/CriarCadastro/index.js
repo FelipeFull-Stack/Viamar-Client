@@ -274,11 +274,11 @@ function CriarCadastro() {
 			<hr />
 
 			<div className="div-button">
-				<button className="btn1 button-cadastro" type="submit">
+				<button className="btn1" type="submit">
 					Enviar
 				</button>
 				<button
-					className="btn2 button-cadastro"
+					className="btn2"
 					type="button"
 					onClick={clearFunction}>
 					Limpar

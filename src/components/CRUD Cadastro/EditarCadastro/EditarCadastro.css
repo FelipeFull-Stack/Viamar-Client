@@ -412,6 +412,14 @@
 	.btn2:hover {
 		background-color: red;
 	}
+	.btn3 {
+		background-color: rgb(175, 0, 0);
+		transition: transform 0.5s ease;
+	}
+	.btn3:hover {
+		background-color: red;
+		transform: scale(1.05);
+	}
 
 	label {
 		margin-top: 16px;

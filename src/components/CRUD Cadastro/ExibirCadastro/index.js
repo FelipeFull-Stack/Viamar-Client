@@ -1,10 +1,9 @@
 import "./ExibirCadastro.css";
 import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { api } from "../../../api/api.js";
 
 function ExibirCadastro() {
-	const params = useParams();
 	const navigate = useNavigate();
 
 	const [cadastros, setCadastros] = useState([]);

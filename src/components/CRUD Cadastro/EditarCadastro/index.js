@@ -58,24 +58,6 @@ function EditarCadastro() {
 		});
 	}
 
-	// useEffect(() => {
-	const dataEntradaCal = new Date(form.dataEntrada);
-	const dataSaidaCal = new Date(form.dataSaida);
-
-	if (form.dataEntrada !== "" && form.dataSaida !== "") {
-		if (dataEntradaCal <= dataSaidaCal) {
-			const umDiaEmMilissegundos = 24 * 60 * 60 * 1000;
-			setForm({
-				...form,
-				quantidadeDias: Math.round(
-					Math.abs((dataEntradaCal - dataSaidaCal) / umDiaEmMilissegundos),
-				),
-			});
-		} else {
-			window.alert("Erro: a data de saída é antes da data de entrada.");
-		}
-	}
-	// }, [form.dataEntrada, form.dataSaida]);
 
 	const handleChange = (event) => {
 		setForm({ ...form, [event.target.name]: event.target.value });
@@ -300,6 +282,12 @@ function EditarCadastro() {
 						type="button"
 						onClick={clearFunction}>
 						Limpar
+					</button>
+					<button
+						className="btn3 button-cadastro"
+						type="button"
+						onClick={clearFunction}>
+						Deletar
 					</button>
 				</div>
 			</form>
