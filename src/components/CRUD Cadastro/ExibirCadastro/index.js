@@ -36,7 +36,7 @@ function ExibirCadastro() {
 									<button
 										className="button-ver"
 										onClick={() => {
-											navigate(`/edit-cadastro/${params.currentElement._id}`);
+											navigate(`/detalhe-cadastro/${currentElement._id}`);
 										}}>
 										Ver
 									</button>
