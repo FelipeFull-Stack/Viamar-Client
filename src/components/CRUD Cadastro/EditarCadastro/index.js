@@ -88,6 +88,15 @@ function EditarCadastro() {
 		}
 	}
 
+	async function handleDelete() {
+		try {
+			await api.delete(`/cadastro/${params.id}`);
+			navigate("/exibir-cadastros");
+		} catch (err) {
+			console.log(`Erro do Back-end em DetalheCadastro/handleDelete: ${err}`);
+		}
+	}
+
 	return (
 		<>
 			<form onSubmit={handleSubmit} style={{ position: "relative" }}>
@@ -274,7 +283,7 @@ function EditarCadastro() {
 					<button
 						className="btn3 button-cadastro"
 						type="button"
-						onClick={clearFunction}>
+						onClick={handleDelete}>
 						Deletar
 					</button>
 				</div>

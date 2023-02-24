@@ -25,10 +25,19 @@ function DetalheCadastro() {
 	const formattedDate2 = new Date(form.dataSaida).toLocaleDateString("pt-BR");
 	const formattedDate3 = new Date(form.createdAt).toLocaleDateString("pt-BR");
 
+	async function handleDelete() {
+		try {
+			await api.delete(`/cadastro/${params.id}`);
+			navigate("/exibir-cadastros");
+		} catch (err) {
+			console.log(`Erro do Back-end em DetalheCadastro/handleDelete: ${err}`);
+		}
+	}
+
 	return (
 		<>
 			<form style={{ position: "relative" }}>
-				<h1 style={{marginBottom: "10px"}}>Cadastro</h1>
+				<h1 style={{ marginBottom: "10px" }}>Cadastro</h1>
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
 						<p>Nº de Protocolo:</p>
@@ -86,11 +95,11 @@ function DetalheCadastro() {
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
 						<p htmlFor="horaEntrada">Hora de Entrada:</p>
-						<p className="paragrafo-test">{form.horaEntrada}</p>
+						<p className="paragrafo-test">{form.horaEntrada} horas</p>
 					</div>
 					<div className="div-unica-direita">
 						<p htmlFor="horaSaida">Hora de Saida:</p>
-						<p className="paragrafo-test">{form.horaSaida}</p>
+						<p className="paragrafo-test">{form.horaSaida} horas</p>
 					</div>
 				</div>
 
@@ -126,7 +135,7 @@ function DetalheCadastro() {
 						}}>
 						Editar
 					</button>
-					<button className="btn3" type="button">
+					<button className="btn3" type="button" onClick={handleDelete}>
 						Deletar
 					</button>
 				</div>

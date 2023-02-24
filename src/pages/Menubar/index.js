@@ -55,14 +55,6 @@ function Menubar() {
 							Cadastros
 						</button>
 					</li>
-					<li>
-						<button
-							onClick={() => {
-								navigate("/cadastrar");
-							}}>
-							Cadastrar
-						</button>
-					</li>
 				</ul>
 			</div>
 
@@ -102,12 +94,6 @@ function Menubar() {
 									navigate("/exibir-cadastros");
 								}}>
 								Cadastros
-							</button>
-							<button
-								onClick={() => {
-									navigate("/cadastro");
-								}}>
-								botão 4
 							</button>
 						</div>
 					)}
