@@ -22,8 +22,24 @@ function EditarCadastro() {
 		localOrigem: "",
 		localDestino: "",
 		veiculoUsado: "",
+		dam: "",
+		pagamento: "",
 	});
+	// const [dataDeEntrada, setDataDeEntrada] = useState(form.dataEntrada);
+	// const [dataDeSaida, setDataDeSaida] = useState(form.dataSaida);
 
+	// function handleChangeDate(event) {
+	// 	const dataEntradaFormatada = new Date(event.target.value)
+	// 		.toISOString()
+	// 		.split("T")[0];
+	// 	setDataDeEntrada(dataEntradaFormatada);
+	// 	const dataSaidaFormatada = new Date(event.target.value)
+	// 		.toISOString()
+	// 		.split("T")[0];
+	// 	setDataDeSaida(dataSaidaFormatada);
+	// }
+
+	console.log(form);
 	useEffect(() => {
 		async function fetchCadastros() {
 			try {
@@ -55,6 +71,8 @@ function EditarCadastro() {
 			localOrigem: "",
 			localDestino: "",
 			veiculoUsado: "",
+			dam: "",
+			pagamento: "",
 		});
 	}
 
@@ -65,7 +83,7 @@ function EditarCadastro() {
 	async function handleSubmit(event) {
 		event.preventDefault();
 		try {
-			await api.put(`/cadastro/${params.id}`, {
+			await api.put(`/cadastro/ADMIN/${params.id}`, {
 				empresaOnibus: form.empresaOnibus,
 				placaOnibus: form.placaOnibus,
 				nomeMotorista: form.nomeMotorista,
@@ -81,8 +99,10 @@ function EditarCadastro() {
 				localOrigem: form.localOrigem,
 				localDestino: form.localDestino,
 				veiculoUsado: form.veiculoUsado,
+				dam: form.dam,
+				pagamento: form.pagamento,
 			});
-			navigate("/exibir-cadastros");
+			navigate("/exibir-cadastros/ADMIN");
 		} catch (err) {
 			console.log(`Erro do Front-end em CriarCadastro/handleSubmit: ${err}`);
 		}
@@ -90,7 +110,7 @@ function EditarCadastro() {
 
 	async function handleDelete() {
 		try {
-			await api.delete(`/cadastro/${params.id}`);
+			await api.delete(`/cadastro/ADMIN/${params.id}`);
 			navigate("/exibir-cadastros");
 		} catch (err) {
 			console.log(`Erro do Back-end em DetalheCadastro/handleDelete: ${err}`);
@@ -204,7 +224,7 @@ function EditarCadastro() {
 						name="horaEntrada"
 						value={form.horaEntrada}
 						onChange={handleChange}
-						disable
+						disabled
 					/>
 				</div>
 				<div className="div-unica-criarformulario">
@@ -215,7 +235,7 @@ function EditarCadastro() {
 						name="horaSaida"
 						value={form.horaSaida}
 						onChange={handleChange}
-						disable
+						disabled
 					/>
 				</div>
 
@@ -227,19 +247,12 @@ function EditarCadastro() {
 						name="dataEntrada"
 						value={form.dataEntrada}
 						onChange={handleChange}
-						disable
+						disabled
 					/>
 				</div>
 				<div className="div-unica-criarformulario">
 					<label htmlFor="dataSaida">Data de Saída:</label>
-					<input
-						type="date"
-						id="dataSaida"
-						name="dataSaida"
-						value={form.dataSaida}
-						onChange={handleChange}
-						disable
-					/>
+					<label>{form.dataSaida}</label>
 				</div>
 
 				<div className="div-unica-criarformulario">
@@ -267,6 +280,34 @@ function EditarCadastro() {
 						<option value="ONIBUS">Ônibus</option>
 						<option value="VAN">Van</option>
 						<option value="MINIVAN">Mini-Van</option>
+					</select>
+				</div>
+
+				<div className="div-unica-criarformulario">
+					<label htmlFor="dam">DAM:</label>
+					<select
+						type="select"
+						id="dam"
+						name="dam"
+						value={form.dam}
+						onChange={handleChange}
+						disabled>
+						<option value="SIM">Sim</option>
+						<option value="NAO">Não</option>
+					</select>
+				</div>
+
+				<div className="div-unica-criarformulario">
+					<label htmlFor="pagamento">Pagamento:</label>
+					<select
+						type="select"
+						id="pagamento"
+						name="pagamento"
+						value={form.pagamento}
+						onChange={handleChange}
+						required>
+						<option value="NAO PAGO">Pendente</option>
+						<option value="PAGO">Efetuado</option>
 					</select>
 				</div>
 

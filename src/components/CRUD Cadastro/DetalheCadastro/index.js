@@ -21,8 +21,8 @@ function DetalheCadastro() {
 		fetchForm();
 	}, [params.id]);
 
-	const formattedDate1 = new Date(form.dataEntrada).toLocaleDateString("pt-BR");
-	const formattedDate2 = new Date(form.dataSaida).toLocaleDateString("pt-BR");
+	const formattedDateEntrada = new Date(form.dataEntrada).toLocaleDateString("pt-BR");
+	const formattedDateSaida = new Date(form.dataSaida).toLocaleDateString("pt-BR");
 	const formattedDate3 = new Date(form.createdAt).toLocaleDateString("pt-BR");
 
 	async function handleDelete() {
@@ -106,11 +106,11 @@ function DetalheCadastro() {
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
 						<p htmlFor="dataEntrada">Data de Entrada:</p>
-						<p className="paragrafo-test">{formattedDate1}</p>
+						<p className="paragrafo-test">{formattedDateEntrada}</p>
 					</div>
 					<div className="div-unica-direita">
 						<p htmlFor="dataSaida">Data de Saída:</p>
-						<p className="paragrafo-test">{formattedDate2}</p>
+						<p className="paragrafo-test">{formattedDateSaida}</p>
 					</div>
 				</div>
 
