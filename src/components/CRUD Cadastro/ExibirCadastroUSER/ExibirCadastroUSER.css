@@ -12,6 +12,7 @@
 		justify-content: center;
 		align-items: center;
 		margin-bottom: 7.5%;
+		gap: 2px;
 	}
 
 	.div-map-cadastros {
@@ -83,6 +84,7 @@
 		justify-content: center;
 		align-items: center;
 		margin-bottom: 7.5%;
+		gap: 8px;
 	}
 
 	.div-map-cadastros {
@@ -100,7 +102,8 @@
 		transition: transform 0.3s ease;
 	}
 	.div-map-cadastros:hover {
-		transform: scale(1.05);
+		transform: scale(1.035);
+		border: 2px solid rgb(65, 211, 255);
 	}
 	.div-map-cadastros h2 {
 		font-size: 1rem;
@@ -157,6 +160,7 @@
 		justify-content: center;
 		align-items: center;
 		margin-bottom: 7.5%;
+		gap: 8px;
 	}
 
 	.div-map-cadastros {
@@ -174,7 +178,8 @@
 		transition: transform 0.3s ease;
 	}
 	.div-map-cadastros:hover {
-		transform: scale(1.05);
+		transform: scale(1.035);
+		border: 2px solid rgb(65, 211, 255);
 	}
 	.div-map-cadastros h2 {
 		font-size: 1rem;
@@ -231,6 +236,7 @@
 		justify-content: center;
 		align-items: center;
 		margin-bottom: 7.5%;
+		gap: 8px;
 	}
 
 	.div-map-cadastros {
@@ -248,7 +254,8 @@
 		transition: transform 0.3s ease;
 	}
 	.div-map-cadastros:hover {
-		transform: scale(1.05);
+		transform: scale(1.035);
+		border: 2px solid rgb(65, 211, 255);
 	}
 	.div-map-cadastros h2 {
 		font-size: 1rem;

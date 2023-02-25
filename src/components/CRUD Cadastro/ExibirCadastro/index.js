@@ -24,7 +24,7 @@ function ExibirCadastro() {
 		<>
 			<div className="div-geral-exibircadastros">
 				<h1 style={{ marginBottom: "20px" }} className="h1-personalizado">
-					Lista de Cadastros
+					Lista de Reservas
 				</h1>
 				{cadastros.reverse().map((currentElement) => {
 					const formattedDate = new Date(
@@ -53,11 +53,11 @@ function ExibirCadastro() {
 							</div>
 							<div className="div-dupla-cadastro">
 								<div className="div-unica-cadastro">
-									<h2>Protocolo: </h2>
-									<p>{currentElement._id}</p>
+									<h2>Excursionista: </h2>
+									<p>{currentElement.nomeExcursionista}</p>
 								</div>
 								<div className="div-unica-cadastro">
-									<h2>Criação do Cadastro: </h2>
+									<h2>Reserva Criada: </h2>
 									<p>{formattedDate}</p>
 								</div>
 							</div>

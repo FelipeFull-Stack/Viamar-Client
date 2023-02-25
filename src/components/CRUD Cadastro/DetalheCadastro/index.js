@@ -12,7 +12,7 @@ function DetalheCadastro() {
 	useEffect(() => {
 		async function fetchForm() {
 			try {
-				const response = await api.get(`/cadastro/${params.id}`);
+				const response = await api.get(`/cadastro/ADMIN/${params.id}`);
 				setForm(response.data);
 			} catch (err) {
 				console.log(`Erro do Front-end em DetalheCadastro/fetchForm: ${err}`);
@@ -37,7 +37,7 @@ function DetalheCadastro() {
 	return (
 		<>
 			<form style={{ position: "relative" }}>
-				<h1 style={{ marginBottom: "10px" }}>Cadastro</h1>
+				<h1 style={{ marginBottom: "10px" }}>Reserva</h1>
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
 						<p>Nº de Protocolo:</p>

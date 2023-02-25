@@ -27,7 +27,7 @@ function EditarCadastro() {
 	useEffect(() => {
 		async function fetchCadastros() {
 			try {
-				const response = await api.get(`/cadastro/${params.id}`);
+				const response = await api.get(`/cadastro/ADMIN/${params.id}`);
 				setForm(response.data);
 			} catch (err) {
 				console.log(
@@ -100,7 +100,7 @@ function EditarCadastro() {
 	return (
 		<>
 			<form onSubmit={handleSubmit} style={{ position: "relative" }}>
-				<h1 style={{ marginBottom: "10px" }}>Cadastro</h1>
+				<h1 style={{ marginBottom: "10px" }}>Editando Reserva</h1>
 
 				<div className="div-unica-criarformulario">
 					<label htmlFor="empresaOnibus">Nome da Empresa do Ônibus:</label>
@@ -204,7 +204,7 @@ function EditarCadastro() {
 						name="horaEntrada"
 						value={form.horaEntrada}
 						onChange={handleChange}
-						required
+						disable
 					/>
 				</div>
 				<div className="div-unica-criarformulario">
@@ -215,7 +215,7 @@ function EditarCadastro() {
 						name="horaSaida"
 						value={form.horaSaida}
 						onChange={handleChange}
-						required
+						disable
 					/>
 				</div>
 
@@ -227,7 +227,7 @@ function EditarCadastro() {
 						name="dataEntrada"
 						value={form.dataEntrada}
 						onChange={handleChange}
-						required
+						disable
 					/>
 				</div>
 				<div className="div-unica-criarformulario">
@@ -238,7 +238,7 @@ function EditarCadastro() {
 						name="dataSaida"
 						value={form.dataSaida}
 						onChange={handleChange}
-						required
+						disable
 					/>
 				</div>
 
