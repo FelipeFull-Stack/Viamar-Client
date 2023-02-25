@@ -1,8 +1,7 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { api } from "../../../api/api";
 import "./EditarCadastro.css";
-import { MyContext } from "../../../context/MyContext";
 
 function EditarCadastro() {
 	const navigate = useNavigate();
@@ -25,9 +24,8 @@ function EditarCadastro() {
 		veiculoUsado: "",
 		dam: "",
 		pagamento: "",
+		color: "",
 	});
-
-	const { setPagamentoColor } = useContext(MyContext);
 
 	console.log(form);
 	useEffect(() => {
@@ -73,6 +71,9 @@ function EditarCadastro() {
 	async function handleSubmit(event) {
 		event.preventDefault();
 		try {
+			if (form.pagamento === "PAGO") {
+				setForm({ color: "green" });
+			}
 			await api.put(`/cadastro/ADMIN/${params.id}`, {
 				empresaOnibus: form.empresaOnibus,
 				placaOnibus: form.placaOnibus,
@@ -91,10 +92,8 @@ function EditarCadastro() {
 				veiculoUsado: form.veiculoUsado,
 				dam: form.dam,
 				pagamento: form.pagamento,
+				color: form.color
 			});
-			if(form.pagamento === "PAGO") {
-				setPagamentoColor({color: "green"});
-			}
 			navigate("/exibir-cadastros/");
 		} catch (err) {
 			console.log(`Erro do Front-end em CriarCadastro/handleSubmit: ${err}`);
