@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { api } from "../../../api/api";
 import "./EditarCadastro.css";
+import { MyContext } from "../../../context/MyContext";
 
 function EditarCadastro() {
 	const navigate = useNavigate();
@@ -25,19 +26,8 @@ function EditarCadastro() {
 		dam: "",
 		pagamento: "",
 	});
-	// const [dataDeEntrada, setDataDeEntrada] = useState(form.dataEntrada);
-	// const [dataDeSaida, setDataDeSaida] = useState(form.dataSaida);
 
-	// function handleChangeDate(event) {
-	// 	const dataEntradaFormatada = new Date(event.target.value)
-	// 		.toISOString()
-	// 		.split("T")[0];
-	// 	setDataDeEntrada(dataEntradaFormatada);
-	// 	const dataSaidaFormatada = new Date(event.target.value)
-	// 		.toISOString()
-	// 		.split("T")[0];
-	// 	setDataDeSaida(dataSaidaFormatada);
-	// }
+	const { setPagamentoColor } = useContext(MyContext);
 
 	console.log(form);
 	useEffect(() => {
@@ -102,7 +92,10 @@ function EditarCadastro() {
 				dam: form.dam,
 				pagamento: form.pagamento,
 			});
-			navigate("/exibir-cadastros/ADMIN");
+			if(form.pagamento === "PAGO") {
+				setPagamentoColor({color: "green"});
+			}
+			navigate("/exibir-cadastros/");
 		} catch (err) {
 			console.log(`Erro do Front-end em CriarCadastro/handleSubmit: ${err}`);
 		}
@@ -116,6 +109,13 @@ function EditarCadastro() {
 			console.log(`Erro do Back-end em DetalheCadastro/handleDelete: ${err}`);
 		}
 	}
+
+	const formattedDateEntrada = new Date(form.dataEntrada).toLocaleDateString(
+		"pt-BR",
+	);
+	const formattedDateSaida = new Date(form.dataSaida).toLocaleDateString(
+		"pt-BR",
+	);
 
 	return (
 		<>
@@ -218,41 +218,20 @@ function EditarCadastro() {
 
 				<div className="div-unica-criarformulario">
 					<label htmlFor="horaEntrada">Hora de Entrada:</label>
-					<input
-						type="number"
-						id="horaEntrada"
-						name="horaEntrada"
-						value={form.horaEntrada}
-						onChange={handleChange}
-						disabled
-					/>
+					<label style={{ fontWeight: 500 }}>{form.horaEntrada}:00 Hrs</label>
 				</div>
 				<div className="div-unica-criarformulario">
 					<label htmlFor="horaSaida">Hora de Saida:</label>
-					<input
-						type="number"
-						id="horaSaida"
-						name="horaSaida"
-						value={form.horaSaida}
-						onChange={handleChange}
-						disabled
-					/>
+					<label style={{ fontWeight: 500 }}>{form.horaSaida}:00 Hrs</label>
 				</div>
 
 				<div className="div-unica-criarformulario">
 					<label htmlFor="dataEntrada">Data de Entrada:</label>
-					<input
-						type="date"
-						id="dataEntrada"
-						name="dataEntrada"
-						value={form.dataEntrada}
-						onChange={handleChange}
-						disabled
-					/>
+					<label style={{ fontWeight: 500 }}>{formattedDateEntrada}</label>
 				</div>
 				<div className="div-unica-criarformulario">
 					<label htmlFor="dataSaida">Data de Saída:</label>
-					<label>{form.dataSaida}</label>
+					<label style={{ fontWeight: 500 }}>{formattedDateSaida}</label>
 				</div>
 
 				<div className="div-unica-criarformulario">

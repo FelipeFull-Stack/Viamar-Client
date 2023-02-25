@@ -3,14 +3,17 @@ import { createContext, useState } from "react";
 const MyContext = createContext();
 
 function MyContextComponent(props) {
+	const [adm, setAdm] = useState(false);
+	const [pagamentoColor, setPagamentoColor] = useState({
+		color: "",
+	});
 
-    const [adm, setAdm] = useState(false);
-
-    return (
-        <MyContext.Provider value={{ adm, setAdm }}>
-            {props.children}
-        </MyContext.Provider>
-    );
+	return (
+		<MyContext.Provider
+			value={{ adm, setAdm, pagamentoColor, setPagamentoColor }}>
+			{props.children}
+		</MyContext.Provider>
+	);
 }
 
-export { MyContext, MyContextComponent }
+export { MyContext, MyContextComponent };
