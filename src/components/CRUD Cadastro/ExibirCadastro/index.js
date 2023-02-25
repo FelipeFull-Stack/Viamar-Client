@@ -20,13 +20,13 @@ function ExibirCadastro() {
 		fetchCadastros();
 	}, []);
 
-	return (
+	return ( //ADMIN
 		<>
 			<div className="div-geral-exibircadastros">
 				<h1 style={{ marginBottom: "20px" }} className="h1-personalizado">
 					Lista de Cadastros
 				</h1>
-				{cadastros.map((currentElement) => {
+				{cadastros.reverse().map((currentElement) => {
 					const formattedDate = new Date(
 						currentElement.createdAt,
 					).toLocaleDateString("pt-BR");

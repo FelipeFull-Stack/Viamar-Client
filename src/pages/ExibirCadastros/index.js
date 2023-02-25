@@ -1,4 +1,5 @@
 import { ExibirCadastro } from "../../components/CRUD Cadastro/ExibirCadastro/index";
+import { ExibirCadastroUSER } from "../../components/CRUD Cadastro/ExibirCadastroUSER/index";
 import { api } from "../../api/api";
 import { useState, useEffect, useContext } from "react";
 import { MyContext } from "../../context/MyContext";
@@ -16,7 +17,6 @@ function ExibirCadastros() {
 		async function CheckUser() {
 			try {
 				const user = localStorage.getItem("loggedInUser");
-				// console.log(user)
 
 				const { role } = JSON.parse(user).user;
 				setAdm(role === "ADMIN");
@@ -40,25 +40,12 @@ function ExibirCadastros() {
 		CheckUser();
 	}, []);
 
-	// async function fetchIsAdmin() {
-	// 	try {
-	//
-	// 	} catch (err) {}
-	// }
-	// fetchIsAdmin();
-console.log(formUSER)
 	return (
 		<>
 			{adm === true ? (
 				<ExibirCadastro /> //adm
 			) : (
-				<h1>{formUSER.map((currentElement) => {
-					return (
-						<>
-							{currentElement.localDestino}
-						</>
-					)
-				})}</h1> //user
+				<ExibirCadastroUSER /> //user
 			)}
 		</>
 	);

@@ -11,7 +11,7 @@ function LogIn() {
 		password: "",
 	});
 
-	const { loggedInUser, setLoggedInUser } = useContext(AuthContext);
+	const { setLoggedInUser } = useContext(AuthContext);
 
 	function handleChange(event) {
 		setForm({ ...form, [event.target.name]: event.target.value });
@@ -44,7 +44,7 @@ function LogIn() {
 									name="email"
 									value={form.email}
 									onChange={handleChange}
-									style={{textAlign: "justify"}}
+									style={{ textAlign: "justify" }}
 								/>
 							</div>
 							<div>
@@ -55,7 +55,7 @@ function LogIn() {
 									name="password"
 									value={form.password}
 									onChange={handleChange}
-									style={{textAlign: "justify"}}
+									style={{ textAlign: "justify" }}
 								/>
 							</div>
 							<div>
