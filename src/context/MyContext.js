@@ -4,12 +4,10 @@ const MyContext = createContext();
 
 function MyContextComponent(props) {
 
-    const [select, setSelect] = useState({
-        selected: ""
-    });
+    const [adm, setAdm] = useState(false);
 
     return (
-        <MyContext.Provider value={{ select, setSelect }}>
+        <MyContext.Provider value={{ adm, setAdm }}>
             {props.children}
         </MyContext.Provider>
     );

@@ -11,9 +11,7 @@ function LogIn() {
 		password: "",
 	});
 
-	const { loggedInUser, setLoggedInUser } = useContext(AuthContext);
-
-	console.log(loggedInUser);
+	const { setLoggedInUser } = useContext(AuthContext);
 
 	function handleChange(event) {
 		setForm({ ...form, [event.target.name]: event.target.value });
@@ -26,7 +24,7 @@ function LogIn() {
 			const response = await api.post("/user/login", form);
 			setLoggedInUser(response.data);
 			localStorage.setItem("loggedInUser", JSON.stringify(response.data));
-			navigate("/home");
+			navigate(`/exibir-cadastros`);
 		} catch (err) {
 			console.log(`Erro do Front-end em LogIn(handleSubmit): ${err}`);
 		}
@@ -34,7 +32,7 @@ function LogIn() {
 	return (
 		<>
 			<body>
-				<div class="container">
+				<div className="container">
 					<section id="content">
 						<form action="" onSubmit={handleSubmit}>
 							<h1>Log in</h1>
@@ -46,6 +44,7 @@ function LogIn() {
 									name="email"
 									value={form.email}
 									onChange={handleChange}
+									style={{ textAlign: "justify" }}
 								/>
 							</div>
 							<div>
@@ -56,6 +55,7 @@ function LogIn() {
 									name="password"
 									value={form.password}
 									onChange={handleChange}
+									style={{ textAlign: "justify" }}
 								/>
 							</div>
 							<div>
