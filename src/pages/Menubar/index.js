@@ -2,6 +2,7 @@ import "./Menubar.css";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef, useContext } from "react";
 import { AuthContext } from "../../context/authContext";
+import { MyContext } from "../../context/MyContext";
 
 import menu from "../../images/menuhamburguer.png";
 
@@ -10,6 +11,7 @@ function Menubar() {
 	const [isExpanded, setIsExpanded] = useState(false);
 	const ref = useRef(null);
 	const { setLoggedInUser } = useContext(AuthContext);
+	const { setAdm } = useContext(MyContext);
 
 	useEffect(() => {
 		const handleClickOutside = (event) => {
@@ -28,6 +30,7 @@ function Menubar() {
 	function handleLogOut() {
 		localStorage.removeItem("loggedInUser");
 		setLoggedInUser(null);
+		setAdm(false);
 		navigate("/login");
 	}
 

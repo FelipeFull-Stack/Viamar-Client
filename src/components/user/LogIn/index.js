@@ -24,7 +24,7 @@ function LogIn() {
 			const response = await api.post("/user/login", form);
 			setLoggedInUser(response.data);
 			localStorage.setItem("loggedInUser", JSON.stringify(response.data));
-			navigate("/exibir-cadastros");
+			navigate(`/exibir-cadastros`);
 		} catch (err) {
 			console.log(`Erro do Front-end em LogIn(handleSubmit): ${err}`);
 		}

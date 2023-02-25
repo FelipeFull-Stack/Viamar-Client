@@ -1,54 +1,74 @@
 import { ExibirCadastro } from "../../components/CRUD Cadastro/ExibirCadastro/index";
 import { api } from "../../api/api";
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useState, useEffect, useContext } from "react";
+import { MyContext } from "../../context/MyContext";
+// import { useParams } from "react-router-dom";
 import "./ExibirCadastros.module.css";
 
 function ExibirCadastros() {
-	const params = useParams();
+	// const params = useParams();
 	const [formADMIN, setFormADMIN] = useState([]);
-	const [formUSER, setFormUSER] = useState(null);
-	const [isAdmin, setIsAdmin] = useState(false);
+	const [formUSER, setFormUSER] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
+	const { adm, setAdm } = useContext(MyContext);
 
 	useEffect(() => {
 		async function CheckUser() {
 			try {
 				const user = localStorage.getItem("loggedInUser");
-				if (user) {
-					const { _id, role } = JSON.parse(user).user;
-					console.log(`ID do USER: ${_id}`);
-					console.log(`ROLE do USER: ${role}`);
-					setIsAdmin(role === "ADMIN");
-				}
-				if (isAdmin) {
+				// console.log(user)
+
+				const { role } = JSON.parse(user).user;
+				setAdm(role === "ADMIN");
+
+				if (adm) {
+					console.log("adm é true");
 					const response = await api.get("/cadastro/ADMIN/");
-					console.log(response.data);
-					setFormADMIN(response.date);
-					setIsLoading(false);
+					setFormADMIN(response.data);
 				} else {
 					const { _id } = JSON.parse(user).user;
+					console.log("adm é false");
 					const response = await api.get(`/cadastro/${_id}`);
 					setFormUSER(response.data);
-					setIsLoading(false);
 				}
+				setIsLoading(false);
 			} catch (err) {
-				console.log(`Erro do Back-end em ExibirCadastro/CheckUser: ${err}`);
+				console.log(`Erro do Front-end em ExibirCadastro/CheckUser: ${err}`);
 				setIsLoading(false);
 			}
 		}
 		CheckUser();
 	}, []);
 
+	// async function fetchIsAdmin() {
+	// 	try {
+	//
+	// 	} catch (err) {}
+	// }
+	// fetchIsAdmin();
+console.log(formUSER)
 	return (
 		<>
-			<div>{formUSER}</div>
-			<div>{formADMIN}</div>
+			{adm === true ? (
+				<ExibirCadastro /> //adm
+			) : (
+				<h1>{formUSER.map((currentElement) => {
+					return (
+						<>
+							{currentElement.localDestino}
+						</>
+					)
+				})}</h1> //user
+			)}
 		</>
 	);
 }
 
 export { ExibirCadastros };
+
+/* {formADMIN.map((currentElement) => {
+					return <h1 key={currentElement.key}>{currentElement.localOrigem}</h1>;
+				})} */
 
 // api.get(`/cadastro/${user._id}`).then((response) => {
 // 	setFormUSER(response.data);

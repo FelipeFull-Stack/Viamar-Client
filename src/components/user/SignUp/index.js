@@ -29,7 +29,7 @@ function SignUp() {
 	return (
 		<>
 			<body>
-				<div class="container">
+				<div className="container">
 					<section id="content">
 						<form action="" onSubmit={handleSubmit}>
 							<h1>Sign in</h1>
