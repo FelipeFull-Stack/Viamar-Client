@@ -13,8 +13,6 @@ function LogIn() {
 
 	const { loggedInUser, setLoggedInUser } = useContext(AuthContext);
 
-	console.log(loggedInUser);
-
 	function handleChange(event) {
 		setForm({ ...form, [event.target.name]: event.target.value });
 	}
@@ -34,7 +32,7 @@ function LogIn() {
 	return (
 		<>
 			<body>
-				<div class="container">
+				<div className="container">
 					<section id="content">
 						<form action="" onSubmit={handleSubmit}>
 							<h1>Log in</h1>
