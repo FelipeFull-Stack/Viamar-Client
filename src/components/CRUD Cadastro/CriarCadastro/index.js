@@ -21,6 +21,8 @@ function CriarCadastro() {
 		localOrigem: "",
 		localDestino: "",
 		veiculoUsado: "",
+		dam: "",
+		pagamento: "",
 	});
 
 	function clearFunction() {
@@ -40,6 +42,8 @@ function CriarCadastro() {
 			localOrigem: "",
 			localDestino: "",
 			veiculoUsado: "",
+			dam: "",
+			pagamento: "",
 		});
 	}
 
@@ -78,7 +82,7 @@ function CriarCadastro() {
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<h1 style={{ marginBottom: "10px" }}>Formulário de Cadastro</h1>
+			<h1 style={{ marginBottom: "10px" }}>Formulário de Reserva</h1>
 
 			<div className="div-unica-criarformulario">
 				<label htmlFor="empresaOnibus">Nome da Empresa do Ônibus:</label>
@@ -245,6 +249,31 @@ function CriarCadastro() {
 					<option value="ONIBUS">Ônibus</option>
 					<option value="VAN">Van</option>
 					<option value="MINIVAN">Mini-Van</option>
+				</select>
+			</div>
+			<div className="div-unica-criarformulario">
+				<label htmlFor="dam">DAM: </label>
+				<select
+					id="dam"
+					name="dam"
+					value={form.dam}
+					onChange={handleChange}
+					required>
+					<option>... Selecione ...</option>
+					<option value="SIM">Sim</option>
+					<option value="NAO">Não</option>
+				</select>
+			</div>
+			<div className="div-unica-criarformulario">
+				<label htmlFor="pagamento">Pagamento: </label>
+				<select
+					id="pagamento"
+					name="pagamento"
+					value={form.pagamento}
+					onChange={handleChange}
+					disabled>
+					<option value="NAO PAGO">Pendente</option>
+					<option value="PAGO">Efetuado</option>
 				</select>
 			</div>
 
