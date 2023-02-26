@@ -27,7 +27,6 @@ function EditarCadastro() {
 		color: "",
 	});
 
-	console.log(form);
 	useEffect(() => {
 		async function fetchCadastros() {
 			try {
@@ -41,6 +40,14 @@ function EditarCadastro() {
 		}
 		fetchCadastros();
 	}, []);
+
+	useEffect(() => {
+		if (form.pagamento === "PAGO") {
+			setForm({ ...form, color: "green" });
+		} else if (form.pagamento === "NAO PAGO") {
+			setForm({ ...form, color: "red" });
+		}
+	}, [form.pagamento]);
 
 	function clearFunction() {
 		setForm({
@@ -67,13 +74,11 @@ function EditarCadastro() {
 	const handleChange = (event) => {
 		setForm({ ...form, [event.target.name]: event.target.value });
 	};
+	
 
 	async function handleSubmit(event) {
 		event.preventDefault();
 		try {
-			if (form.pagamento === "PAGO") {
-				setForm({ color: "green" });
-			}
 			await api.put(`/cadastro/ADMIN/${params.id}`, {
 				empresaOnibus: form.empresaOnibus,
 				placaOnibus: form.placaOnibus,
@@ -92,7 +97,7 @@ function EditarCadastro() {
 				veiculoUsado: form.veiculoUsado,
 				dam: form.dam,
 				pagamento: form.pagamento,
-				color: form.color
+				color: form.color,
 			});
 			navigate("/exibir-cadastros/");
 		} catch (err) {
@@ -264,7 +269,6 @@ function EditarCadastro() {
 				<div className="div-unica-criarformulario">
 					<label htmlFor="dam">DAM:</label>
 					<select
-						type="select"
 						id="dam"
 						name="dam"
 						value={form.dam}
@@ -278,7 +282,6 @@ function EditarCadastro() {
 				<div className="div-unica-criarformulario">
 					<label htmlFor="pagamento">Pagamento:</label>
 					<select
-						type="select"
 						id="pagamento"
 						name="pagamento"
 						value={form.pagamento}

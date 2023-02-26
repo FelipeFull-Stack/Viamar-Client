@@ -6,7 +6,6 @@ import { useNavigate, useParams } from "react-router-dom";
 function DetalheCadastro() {
 	const navigate = useNavigate();
 	const params = useParams();
-	console.log(params);
 	const [form, setForm] = useState({});
 
 	useEffect(() => {
@@ -21,8 +20,13 @@ function DetalheCadastro() {
 		fetchForm();
 	}, [params.id]);
 
-	const formattedDateEntrada = new Date(form.dataEntrada).toLocaleDateString("pt-BR");
-	const formattedDateSaida = new Date(form.dataSaida).toLocaleDateString("pt-BR");
+
+	const formattedDateEntrada = new Date(form.dataEntrada).toLocaleDateString(
+		"pt-BR",
+	);
+	const formattedDateSaida = new Date(form.dataSaida).toLocaleDateString(
+		"pt-BR",
+	);
 	const formattedDate3 = new Date(form.createdAt).toLocaleDateString("pt-BR");
 
 	async function handleDelete() {
@@ -94,11 +98,11 @@ function DetalheCadastro() {
 
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
-						<p htmlFor="horaEntrada">Hora de Entrada:</p>
+						<p htmlFor="horaEntrada">Horário de Entrada:</p>
 						<p className="paragrafo-test">{form.horaEntrada} horas</p>
 					</div>
 					<div className="div-unica-direita">
-						<p htmlFor="horaSaida">Hora de Saida:</p>
+						<p htmlFor="horaSaida">Horário de Saída:</p>
 						<p className="paragrafo-test">{form.horaSaida} horas</p>
 					</div>
 				</div>
@@ -121,8 +125,20 @@ function DetalheCadastro() {
 					</div>
 
 					<div className="div-unica-direita">
-						<p htmlFor="veiculoUsado">Selecione o Veículo:</p>
-						<p className="paragrafo-test">{form.veiculoUsado}</p>
+						<p htmlFor="veiculoUsado">Veículo:</p>
+						<p className="paragrafo-test">{(form.veiculoUsado === "ONIBUS" ? "Ônibus" : form.veiculoUsado === "VAN" ? "Van" : "Mini-Van")}</p>
+					</div>
+				</div>
+
+				<div className="div-dupla">
+					<div className="div-unica-esquerda">
+						<p htmlFor="localHospedagem">Pagamento:</p>
+						<p className="paragrafo-test">{(form.pagamento === "PAGO" ? "Efetuado" : "Pendente")}</p>
+					</div>
+
+					<div className="div-unica-direita">
+						<p htmlFor="veiculoUsado">DAM:</p>
+						<p className="paragrafo-test">{(form.dam === "SIM" ? "Sim" : "Não")}</p>
 					</div>
 				</div>
 

@@ -22,7 +22,7 @@ function CriarCadastro() {
 		localDestino: "",
 		veiculoUsado: "",
 		dam: "",
-		pagamento: ""
+		pagamento: "",
 	});
 
 	function clearFunction() {
@@ -254,26 +254,24 @@ function CriarCadastro() {
 			<div className="div-unica-criarformulario">
 				<label htmlFor="dam">DAM: </label>
 				<select
-					type="select"
 					id="dam"
 					name="dam"
 					value={form.dam}
 					onChange={handleChange}
 					required>
-					<option value="SIM">SIM</option>
-					<option value="NAO">NÃO</option>
+					<option>... Selecione ...</option>
+					<option value="SIM">Sim</option>
+					<option value="NAO">Não</option>
 				</select>
 			</div>
 			<div className="div-unica-criarformulario">
 				<label htmlFor="pagamento">Pagamento: </label>
 				<select
-					type="select"
 					id="pagamento"
 					name="pagamento"
 					value={form.pagamento}
 					onChange={handleChange}
-					disabled
-				>
+					disabled>
 					<option value="NAO PAGO">Pendente</option>
 					<option value="PAGO">Efetuado</option>
 				</select>
