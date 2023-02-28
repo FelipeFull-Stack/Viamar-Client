@@ -118,8 +118,8 @@ function EditarCadastro() {
 						`Erro do Back-end em DetalheCadastro/handleDelete: ${err}`,
 					);
 				}
-				handleDelete();
 			}
+			handleDelete();
 		}
 	}
 
