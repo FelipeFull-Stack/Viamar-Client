@@ -48,8 +48,8 @@ function ExibirCadastro() {
 									<p>{currentElement.nomeMotorista}</p>
 								</div>
 								<div className="div-unica-cadastro">
-									<h2>Telefone: </h2>
-									<p>{currentElement.telefoneMotorista}</p>
+									<h2>Nº de Protocolo: </h2>
+									<p>{currentElement.numeroReserva}</p>
 								</div>
 							</div>
 							<div className="div-dupla-cadastro">

@@ -40,10 +40,10 @@ function ExibirCadastroUSER() {
 							<div className="div-button-ver">
 								<button
 									className="button-ver"
-                                    
-									style={{ backgroundColor: (currentElement.color)}}>
-									<a  
-										style={{ textDecoration: "none", color: "white"}}
+									disabled={currentElement.habilitado}
+									style={{ backgroundColor: currentElement.color }}>
+									<a
+										style={{ textDecoration: "none", color: "white" }}
 										href={`https://wa.me/5522998200724?text=*Olá%20Estacionamento%20ViaMar*%0AQuero%20*PAGAR*%20esta%20*RESERVA*%0AEmpresa%20de%20Ônibus:%20*${currentElement.empresaOnibus}*%0APlaca:%20*${currentElement.placaOnibus}*%0AMotorista%20e%20Telefone:%20*${currentElement.nomeMotorista}%20-%20${currentElement.telefoneMotorista}*%0AExcursionista%20e%20Telefone:%20*${currentElement.nomeExcursionista}%20-%20${currentElement.telefoneExcursionista}*%0AHospedagem:%20*${currentElement.localHospedagem}*%0AData%20da%20Entrada:%20*${currentElement.dataEntrada}*%0AData%20da%20Saída:%20*${currentElement.dataSaida}*%0ALocal%20de%20Origem:%20*${currentElement.localOrigem}*%0AVeículo:%20*${currentElement.veiculoUsado}*%0AHorário%20de%20Entrada:%20*${currentElement.horaEntrada}Hrs*%0AHorário%20de%20Saída:%20*${currentElement.horaSaida}Hrs*%0ADAM:%20*${currentElement.DAM}*%0AProtocolo%20da%20Reserva:%20*${currentElement._id}*`}
 										target="_blank">
 										Pagar
@@ -62,11 +62,11 @@ function ExibirCadastroUSER() {
 							</div>
 							<div className="div-dupla-cadastro">
 								<div className="div-unica-cadastro">
-									<h2>Protocolo: </h2>
-									<p>{currentElement._id}</p>
+									<h2>Nº de Protocolo: </h2>
+									<p>{currentElement.numeroReserva}</p>
 								</div>
 								<div className="div-unica-cadastro">
-									<h2>Criação do Cadastro: </h2>
+									<h2>Data de Criação: </h2>
 									<p>{formattedDate}</p>
 								</div>
 							</div>

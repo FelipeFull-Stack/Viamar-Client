@@ -55,7 +55,7 @@ function DetalheCadastro() {
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
 						<p>Nº de Protocolo:</p>
-						<p className="paragrafo-test">{form._id}</p>
+						<p className="paragrafo-test">{form.numeroReserva}</p>
 					</div>
 					<div className="div-unica-direita">
 						<p>Criado em:</p>

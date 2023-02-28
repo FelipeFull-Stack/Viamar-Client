@@ -25,6 +25,7 @@ function EditarCadastro() {
 		dam: "",
 		pagamento: "",
 		color: "",
+		habilitado: "",
 	});
 
 	useEffect(() => {
@@ -43,9 +44,11 @@ function EditarCadastro() {
 
 	useEffect(() => {
 		if (form.pagamento === "PAGO") {
-			setForm({ ...form, color: "white" });
+			setForm({ ...form, color: "green" });
+			setForm({ ...form, habilitado: "true" });
 		} else if (form.pagamento === "NAO PAGO") {
 			setForm({ ...form, color: "red" });
+			setForm({ ...form, habilitado: "false" });
 		}
 	}, [form.pagamento]);
 
@@ -68,6 +71,7 @@ function EditarCadastro() {
 			veiculoUsado: "",
 			dam: "",
 			pagamento: "",
+			habilitado: "",
 		});
 	}
 
@@ -97,6 +101,7 @@ function EditarCadastro() {
 				dam: form.dam,
 				pagamento: form.pagamento,
 				color: form.color,
+				habilitado: form.habilitado,
 			});
 			navigate("/exibir-cadastros/");
 		} catch (err) {
