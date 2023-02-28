@@ -151,6 +151,15 @@ function DetalheCadastro() {
 						}}>
 						Editar
 					</button>
+					<button
+						className="btn2"
+						type="button"
+						onClick={() => {
+							navigate("/exibir-cadastros")
+						}}
+					>
+						Voltar
+					</button>
 					<button className="btn3" type="button" onClick={handleDelete}>
 						Deletar
 					</button>

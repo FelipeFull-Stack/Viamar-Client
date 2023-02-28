@@ -43,7 +43,7 @@ function EditarCadastro() {
 
 	useEffect(() => {
 		if (form.pagamento === "PAGO") {
-			setForm({ ...form, color: "green" });
+			setForm({ ...form, color: "white" });
 		} else if (form.pagamento === "NAO PAGO") {
 			setForm({ ...form, color: "red" });
 		}
@@ -74,7 +74,6 @@ function EditarCadastro() {
 	const handleChange = (event) => {
 		setForm({ ...form, [event.target.name]: event.target.value });
 	};
-	
 
 	async function handleSubmit(event) {
 		event.preventDefault();
@@ -105,14 +104,7 @@ function EditarCadastro() {
 		}
 	}
 
-	async function handleDelete() {
-		try {
-			await api.delete(`/cadastro/ADMIN/${params.id}`);
-			navigate("/exibir-cadastros");
-		} catch (err) {
-			console.log(`Erro do Back-end em DetalheCadastro/handleDelete: ${err}`);
-		}
-	}
+	
 
 	const formattedDateEntrada = new Date(form.dataEntrada).toLocaleDateString(
 		"pt-BR",
@@ -299,13 +291,15 @@ function EditarCadastro() {
 					<button
 						className="btn2 button-cadastro"
 						type="button"
-						onClick={clearFunction}>
-						Limpar
+						onClick={() => {
+							navigate("/exibir-cadastros");
+						}}>
+						Voltar
 					</button>
 					<button
 						className="btn3 button-cadastro"
 						type="button"
-						onClick={handleDelete}>
+						onClick={handleDeleteClick}>
 						Deletar
 					</button>
 				</div>

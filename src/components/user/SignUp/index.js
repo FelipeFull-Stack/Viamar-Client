@@ -9,6 +9,11 @@ function SignUp() {
 	const [form, setForm] = useState({
 		email: "",
 		password: "",
+		nomeUsuario: "",
+		empresaUsuario: "",
+		telefoneUsuario: "",
+		cidadeUsuario: "",
+		idSequenciado: "",
 	});
 
 	function handleChange(event) {
@@ -32,7 +37,52 @@ function SignUp() {
 				<div className="container">
 					<section id="content">
 						<form action="" onSubmit={handleSubmit}>
-							<h1>Sign in</h1>
+							<h1>Cadastro</h1>
+
+							<div>
+								<input
+									type="text"
+									placeholder="Nome"
+									required
+									id="nomeUsuario"
+									name="nomeUsuario"
+									value={form.nomeUsuario}
+									onChange={handleChange}
+								/>
+							</div>
+							<div>
+								<input
+									type="text"
+									placeholder="Nome da Empresa"
+									required
+									id="empresaUsuario"
+									name="empresaUsuario"
+									value={form.empresaUsuario}
+									onChange={handleChange}
+								/>
+							</div>
+							<div>
+								<input
+									type="text"
+									placeholder="Telefone da Empresa"
+									required
+									id="telefoneUsuario"
+									name="telefoneUsuario"
+									value={form.telefoneUsuario}
+									onChange={handleChange}
+								/>
+							</div>
+							<div>
+								<input
+									type="text"
+									placeholder="Cidade"
+									required
+									id="cidadeUsuario"
+									name="cidadeUsuario"
+									value={form.cidadeUsuario}
+									onChange={handleChange}
+								/>
+							</div>
 							<div>
 								<input
 									type="text"

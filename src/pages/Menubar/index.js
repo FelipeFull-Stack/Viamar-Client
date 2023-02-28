@@ -80,7 +80,7 @@ function Menubar() {
 
 			<div className="div-central-menu">
 				<div>
-					<h1>Logo Aqui</h1>
+					<h1> </h1>
 				</div>
 				<div className="div-hamburguer">
 					<button

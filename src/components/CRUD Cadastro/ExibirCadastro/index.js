@@ -26,6 +26,7 @@ function ExibirCadastro() {
 				<h1 style={{ marginBottom: "20px" }} className="h1-personalizado">
 					Lista de Reservas
 				</h1>
+				
 				{cadastros.reverse().map((currentElement) => {
 					const formattedDate = new Date(
 						currentElement.createdAt,
