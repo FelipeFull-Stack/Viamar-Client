@@ -44,11 +44,9 @@ function EditarCadastro() {
 
 	useEffect(() => {
 		if (form.pagamento === "PAGO") {
-			setForm({ ...form, color: "green" });
-			setForm({ ...form, habilitado: "true" });
+			setForm({ ...form, color: "green", habilitado: "true" });
 		} else if (form.pagamento === "NAO PAGO") {
-			setForm({ ...form, color: "red" });
-			setForm({ ...form, habilitado: "false" });
+			setForm({ ...form, color: "red", habilitado: "false"  });
 		}
 	}, [form.pagamento]);
 

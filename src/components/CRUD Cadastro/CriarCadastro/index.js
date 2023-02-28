@@ -43,7 +43,7 @@ function CriarCadastro() {
 			localDestino: "",
 			veiculoUsado: "",
 			dam: "",
-			pagamento: "",
+			pagamento: "NAO PAGO",
 		});
 	}
 
