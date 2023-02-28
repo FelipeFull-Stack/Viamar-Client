@@ -104,7 +104,24 @@ function EditarCadastro() {
 		}
 	}
 
-	
+	function handleDeleteClick() {
+		const confirmDelete = window.confirm(
+			"Tem certeza que deseja deletar este item?",
+		);
+		if (confirmDelete) {
+			async function handleDelete() {
+				try {
+					await api.delete(`/cadastro/ADMIN/${params.id}`);
+					navigate("/exibir-cadastros");
+				} catch (err) {
+					console.log(
+						`Erro do Back-end em DetalheCadastro/handleDelete: ${err}`,
+					);
+				}
+				handleDelete();
+			}
+		}
+	}
 
 	const formattedDateEntrada = new Date(form.dataEntrada).toLocaleDateString(
 		"pt-BR",
