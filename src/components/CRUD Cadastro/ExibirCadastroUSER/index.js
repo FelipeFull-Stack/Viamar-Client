@@ -42,12 +42,15 @@ function ExibirCadastroUSER() {
 								<button
 									className="button-ver"
 									type="button"
+									disabled={!currentElement.habilitado}
 									style={{
 										backgroundColor: currentElement.color,
 										color: "white",
 									}}
 									onClick={() => {
-										window.location.href = `https://wa.me/5522998200724?text=*Olá%20Estacionamento%20ViaMar*%0AQuero%20*PAGAR*%20esta%20*RESERVA*%0AEmpresa%20de%20Ônibus:%20*${currentElement.empresaOnibus}*%0APlaca:%20*${currentElement.placaOnibus}*%0AMotorista%20e%20Telefone:%20*${currentElement.nomeMotorista}%20-%20${currentElement.telefoneMotorista}*%0AExcursionista%20e%20Telefone:%20*${currentElement.nomeExcursionista}%20-%20${currentElement.telefoneExcursionista}*%0AHospedagem:%20*${currentElement.localHospedagem}*%0AData%20da%20Entrada:%20*${currentElement.dataEntrada}*%0AData%20da%20Saída:%20*${currentElement.dataSaida}*%0ALocal%20de%20Origem:%20*${currentElement.localOrigem}*%0AVeículo:%20*${currentElement.veiculoUsado}*%0AHorário%20de%20Entrada:%20*${currentElement.horaEntrada}Hrs*%0AHorário%20de%20Saída:%20*${currentElement.horaSaida}Hrs*%0ADAM:%20*${currentElement.DAM}*%0AProtocolo%20da%20Reserva:%20*${currentElement._id}*`;
+										window.open(
+											`https://wa.me/5522998200724?text=*Olá%20Estacionamento%20ViaMar*%0AQuero%20*PAGAR*%20esta%20*RESERVA*%0AEmpresa%20de%20Ônibus:%20*${currentElement.empresaOnibus}*%0APlaca:%20*${currentElement.placaOnibus}*%0AMotorista%20e%20Telefone:%20*${currentElement.nomeMotorista}%20-%20${currentElement.telefoneMotorista}*%0AExcursionista%20e%20Telefone:%20*${currentElement.nomeExcursionista}%20-%20${currentElement.telefoneExcursionista}*%0AHospedagem:%20*${currentElement.localHospedagem}*%0AData%20da%20Entrada:%20*${currentElement.dataEntrada}*%0AData%20da%20Saída:%20*${currentElement.dataSaida}*%0ALocal%20de%20Origem:%20*${currentElement.localOrigem}*%0AVeículo:%20*${currentElement.veiculoUsado}*%0AHorário%20de%20Entrada:%20*${currentElement.horaEntrada}Hrs*%0AHorário%20de%20Saída:%20*${currentElement.horaSaida}Hrs*%0ADAM:%20*${currentElement.DAM}*%0AProtocolo%20da%20Reserva:%20*${currentElement._id}*`,
+										);
 									}}>
 									Pagar
 								</button>
