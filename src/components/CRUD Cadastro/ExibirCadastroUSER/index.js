@@ -42,7 +42,7 @@ function ExibirCadastroUSER() {
 								<button
 									className="button-ver"
 									type="button"
-									disabled={!currentElement.habilitado}
+									disabled={currentElement.habilitado}
 									style={{
 										backgroundColor: currentElement.color,
 										color: "white",
