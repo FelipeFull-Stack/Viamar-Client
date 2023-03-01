@@ -42,6 +42,8 @@ function ExibirCadastro() {
 		}
 	}
 
+	const conteudos = pesquisados.length > 0 ? pesquisados : cadastros;
+
 	return (
 		//ADMIN
 		<>
@@ -52,8 +54,8 @@ function ExibirCadastro() {
 				<div className="div-pesquisar-cadastros-ADM">
 					<input
 						className="input-pesquisar-cadastros-ADM"
-						id="input-pesquisa-adm"
-						name="input-pesquisa-adm"
+						id="inputPesquisaAdm"
+						name="inputPesquisaAdm"
 						value={search.inputPesquisaAdm}
 						onChange={handleChange}
 					/>
@@ -64,7 +66,7 @@ function ExibirCadastro() {
 					</button>
 				</div>
 
-				{cadastros.reverse().map((currentElement) => {
+				{conteudos.reverse().map((currentElement) => {
 					/* const formattedDate = new Date(
 						currentElement.createdAt,
 					).toLocaleDateString("pt-BR"); */
