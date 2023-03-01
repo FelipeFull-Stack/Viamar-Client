@@ -2,11 +2,15 @@ import "./ExibirCadastro.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { api } from "../../../api/api.js";
+import { formToJSON } from "axios";
 
 function ExibirCadastro() {
 	const navigate = useNavigate();
 
 	const [cadastros, setCadastros] = useState([]);
+	const [search, setSearch] = useState({
+		inputPesquisaAdm: "",
+	});
 
 	useEffect(() => {
 		async function fetchCadastros() {
@@ -20,19 +24,43 @@ function ExibirCadastro() {
 		fetchCadastros();
 	}, []);
 
-	return ( //ADMIN
+	function handleChange(event) {
+		setSearch({ ...search, [event.target.name]: event.target.value });
+	}
+
+	return (
+		//ADMIN
 		<>
 			<div className="div-geral-exibircadastros">
 				<h1 style={{ marginBottom: "20px" }} className="h1-personalizado">
 					Lista de Reservas
 				</h1>
-				
+				<div className="div-pesquisar-cadastros-ADM">
+					<input
+						className="input-pesquisar-cadastros-ADM"
+						id="input-pesquisa-adm"
+						name="input-pesquisa-adm"
+						value={search.inputPesquisaAdm}
+						onChange={handleChange}
+					/>
+					<button className="button-pesquisar-cadastros-ADM" onClick={() => {}}>
+						Pesquisar
+					</button>
+				</div>
+
 				{cadastros.reverse().map((currentElement) => {
-					const formattedDate = new Date(
+					/* const formattedDate = new Date(
 						currentElement.createdAt,
-					).toLocaleDateString("pt-BR");
+					).toLocaleDateString("pt-BR"); */
+
+					let pag = "";
+					if (currentElement.pagamento === "PAGO") {
+						pag = "Efetuado";
+					} else {
+						pag = "Pendente";
+					}
 					return (
-						<div  key={currentElement._id} className="div-map-cadastros">
+						<div key={currentElement._id} className="div-map-cadastros">
 							<div className="div-button-ver">
 								<button
 									className="button-ver"
@@ -59,7 +87,7 @@ function ExibirCadastro() {
 								</div>
 								<div className="div-unica-cadastro">
 									<h2>Pagamento: </h2>
-									<p>{currentElement.pagamento}</p>
+									<p>{pag}</p>
 								</div>
 							</div>
 						</div>
