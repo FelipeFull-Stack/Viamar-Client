@@ -9,6 +9,10 @@ function ExibirCadastroUSER() {
 	const navigate = useNavigate();
 
 	const [cadastros, setCadastros] = useState([]);
+	const [pesquisados, setPesquisados] = useState([]);
+	const [search, setSearch] = useState({
+		inputPesquisaAdm: "",
+	});
 	// const { loggedInUser } = useContext(AuthContext);
 	const user = localStorage.getItem("loggedInUser");
 	const { _id } = JSON.parse(user).user;
@@ -24,6 +28,28 @@ function ExibirCadastroUSER() {
 		}
 		fetchCadastros();
 	}, []);
+
+	function handleClickSearch() {
+		if (search.inputPesquisaAdm === "") {
+			setPesquisados([]);
+		} else {
+			setPesquisados(
+				cadastros.filter((currentElement) => {
+					return (
+						String(currentElement.nomeMotorista)
+							.toLowerCase()
+							.includes(search.inputPesquisaAdm.toLowerCase()) ||
+						String(currentElement.nomeExcursionista)
+							.toLowerCase()
+							.includes(search.inputPesquisaAdm.toLowerCase()) ||
+						String(currentElement.numeroReserva)
+							.toLowerCase()
+							.includes(search.inputPesquisaAdm.toLowerCase())
+					);
+				}),
+			);
+		}
+	}
 
 	return (
 		//USER
