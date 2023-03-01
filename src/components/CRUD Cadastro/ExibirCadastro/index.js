@@ -2,12 +2,12 @@ import "./ExibirCadastro.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { api } from "../../../api/api.js";
-import { formToJSON } from "axios";
 
 function ExibirCadastro() {
 	const navigate = useNavigate();
 
 	const [cadastros, setCadastros] = useState([]);
+	const [pesquisados, setPesquisados] = useState([]);
 	const [search, setSearch] = useState({
 		inputPesquisaAdm: "",
 	});
@@ -28,6 +28,20 @@ function ExibirCadastro() {
 		setSearch({ ...search, [event.target.name]: event.target.value });
 	}
 
+	function handleClickSearch() {
+		if (search.inputPesquisaAdm === "") {
+			setPesquisados([]);
+		} else {
+			setPesquisados(
+				cadastros.filter((currentElement) => {
+					return currentElement.nomeMotorista
+						.toLowerCase()
+						.includes(search.inputPesquisaAdm.toLowerCase());
+				}),
+			);
+		}
+	}
+
 	return (
 		//ADMIN
 		<>
@@ -43,7 +57,9 @@ function ExibirCadastro() {
 						value={search.inputPesquisaAdm}
 						onChange={handleChange}
 					/>
-					<button className="button-pesquisar-cadastros-ADM" onClick={() => {}}>
+					<button
+						className="button-pesquisar-cadastros-ADM"
+						onClick={handleClickSearch}>
 						Pesquisar
 					</button>
 				</div>
