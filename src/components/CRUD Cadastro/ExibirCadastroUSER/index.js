@@ -55,6 +55,8 @@ function ExibirCadastroUSER() {
 		}
 	}
 
+	const conteudos = pesquisados.length > 0 ? pesquisados : cadastros;
+
 	return (
 		//USER
 		<>
@@ -62,7 +64,21 @@ function ExibirCadastroUSER() {
 				<h1 style={{ marginBottom: "20px" }} className="h1-personalizado">
 					Lista de Reservas
 				</h1>
-				{cadastros.reverse().map((currentElement) => {
+				<div className="div-pesquisar-cadastros-ADM">
+					<input
+						className="input-pesquisar-cadastros-ADM"
+						id="inputPesquisaAdm"
+						name="inputPesquisaAdm"
+						value={search.inputPesquisaAdm}
+						onChange={handleChange}
+					/>
+					<button
+						className="button-pesquisar-cadastros-ADM"
+						onClick={handleClickSearch}>
+						Pesquisar
+					</button>
+				</div>
+				{conteudos.reverse().map((currentElement) => {
 					const formattedDate = new Date(
 						currentElement.createdAt,
 					).toLocaleDateString("pt-BR");

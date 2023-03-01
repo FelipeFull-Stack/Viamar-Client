@@ -68,6 +68,18 @@
 	.button-ver:hover {
 		background-color: #24ff65;
 	}
+	.div-pesquisar-cadastros-ADM {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: end;
+		margin: 10px;
+		gap: 5px;
+	}
+	.button-pesquisar-cadastros-ADM {
+		height: 37px;
+		padding: 1px;
+	}
 }
 
 @media (max-width: 999px) and (min-width: 650px) {
