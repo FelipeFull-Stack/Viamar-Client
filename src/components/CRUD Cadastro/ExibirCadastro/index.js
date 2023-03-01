@@ -58,8 +58,8 @@ function ExibirCadastro() {
 									<p>{currentElement.nomeExcursionista}</p>
 								</div>
 								<div className="div-unica-cadastro">
-									<h2>Reserva Criada: </h2>
-									<p>{formattedDate}</p>
+									<h2>Pagamento: </h2>
+									<p>{currentElement.pagamento}</p>
 								</div>
 							</div>
 						</div>
