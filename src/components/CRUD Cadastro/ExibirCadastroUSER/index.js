@@ -29,6 +29,10 @@ function ExibirCadastroUSER() {
 		fetchCadastros();
 	}, []);
 
+	function handleChange(event) {
+		setSearch({ ...search, [event.target.name]: event.target.value });
+	}
+
 	function handleClickSearch() {
 		if (search.inputPesquisaAdm === "") {
 			setPesquisados([]);
