@@ -34,9 +34,17 @@ function ExibirCadastro() {
 		} else {
 			setPesquisados(
 				cadastros.filter((currentElement) => {
-					return currentElement.nomeMotorista
-						.toLowerCase()
-						.includes(search.inputPesquisaAdm.toLowerCase());
+					return (
+						String(currentElement.nomeMotorista)
+							.toLowerCase()
+							.includes(search.inputPesquisaAdm.toLowerCase()) ||
+						String(currentElement.nomeExcursionista)
+							.toLowerCase()
+							.includes(search.inputPesquisaAdm.toLowerCase()) ||
+						String(currentElement.numeroReserva)
+							.toLowerCase()
+							.includes(search.inputPesquisaAdm.toLowerCase())
+					);
 				}),
 			);
 		}
