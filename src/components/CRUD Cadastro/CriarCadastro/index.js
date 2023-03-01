@@ -22,7 +22,7 @@ function CriarCadastro() {
 		localDestino: "",
 		veiculoUsado: "",
 		dam: "",
-		pagamento: "",
+		pagamento: "NAO PAGO",
 	});
 
 	function clearFunction() {
@@ -43,7 +43,7 @@ function CriarCadastro() {
 			localDestino: "",
 			veiculoUsado: "",
 			dam: "",
-			pagamento: "",
+			pagamento: "NAO PAGO",
 		});
 	}
 

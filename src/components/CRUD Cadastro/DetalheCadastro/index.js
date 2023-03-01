@@ -29,12 +29,22 @@ function DetalheCadastro() {
 	);
 	const formattedDate3 = new Date(form.createdAt).toLocaleDateString("pt-BR");
 
-	async function handleDelete() {
-		try {
-			await api.delete(`/cadastro/${params.id}`);
-			navigate("/exibir-cadastros");
-		} catch (err) {
-			console.log(`Erro do Back-end em DetalheCadastro/handleDelete: ${err}`);
+	function handleDeleteClick() {
+		const confirmDelete = window.confirm(
+			"Tem certeza que deseja deletar este item?",
+		);
+		if (confirmDelete) {
+			async function handleDelete() {
+				try {
+					await api.delete(`/cadastro/ADMIN/${params.id}`);
+					navigate("/exibir-cadastros");
+				} catch (err) {
+					console.log(
+						`Erro do Back-end em DetalheCadastro/handleDelete: ${err}`,
+					);
+				}
+			}
+			handleDelete();
 		}
 	}
 
@@ -45,7 +55,7 @@ function DetalheCadastro() {
 				<div className="div-dupla">
 					<div className="div-unica-esquerda">
 						<p>Nº de Protocolo:</p>
-						<p className="paragrafo-test">{form._id}</p>
+						<p className="paragrafo-test">{form.numeroReserva}</p>
 					</div>
 					<div className="div-unica-direita">
 						<p>Criado em:</p>
@@ -151,7 +161,16 @@ function DetalheCadastro() {
 						}}>
 						Editar
 					</button>
-					<button className="btn3" type="button" onClick={handleDelete}>
+					<button
+						className="btn2"
+						type="button"
+						onClick={() => {
+							navigate("/exibir-cadastros")
+						}}
+					>
+						Voltar
+					</button>
+					<button className="btn3" type="button" onClick={handleDeleteClick}>
 						Deletar
 					</button>
 				</div>

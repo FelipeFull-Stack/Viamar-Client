@@ -1,0 +1,27 @@
+//Back-end
+const reservaSchema = new mongoose.Schema({
+	numeroReserva: {
+		type: Number,
+		required: true,
+	},
+	// outros campos da reserva
+});
+
+//Front-end
+const getProximoNumeroReserva = async () => {
+	const ultimaReserva = await Reserva.findOne().sort({ numeroReserva: -1 });
+	if (!ultimaReserva) {
+		// se não houver reservas, retorne 1 como o próximo número de reserva
+		return 1;
+	}
+	// adicione 1 ao número de reserva mais recente para obter o próximo número de reserva
+	return ultimaReserva.numeroReserva + 1;
+};
+
+//Front-end
+const novaReserva = new Reserva({
+	numeroReserva: await getProximoNumeroReserva(),
+	// outros campos da reserva
+});
+
+await novaReserva.save();

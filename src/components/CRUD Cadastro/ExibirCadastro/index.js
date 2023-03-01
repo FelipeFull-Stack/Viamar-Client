@@ -7,6 +7,10 @@ function ExibirCadastro() {
 	const navigate = useNavigate();
 
 	const [cadastros, setCadastros] = useState([]);
+	const [pesquisados, setPesquisados] = useState([]);
+	const [search, setSearch] = useState({
+		inputPesquisaAdm: "",
+	});
 
 	useEffect(() => {
 		async function fetchCadastros() {
@@ -20,18 +24,69 @@ function ExibirCadastro() {
 		fetchCadastros();
 	}, []);
 
-	return ( //ADMIN
+	function handleChange(event) {
+		setSearch({ ...search, [event.target.name]: event.target.value });
+	}
+
+	function handleClickSearch() {
+		if (search.inputPesquisaAdm === "") {
+			setPesquisados([]);
+		} else {
+			setPesquisados(
+				cadastros.filter((currentElement) => {
+					return (
+						String(currentElement.nomeMotorista)
+							.toLowerCase()
+							.includes(search.inputPesquisaAdm.toLowerCase()) ||
+						String(currentElement.nomeExcursionista)
+							.toLowerCase()
+							.includes(search.inputPesquisaAdm.toLowerCase()) ||
+						String(currentElement.numeroReserva)
+							.toLowerCase()
+							.includes(search.inputPesquisaAdm.toLowerCase())
+					);
+				}),
+			);
+		}
+	}
+
+	const conteudos = pesquisados.length > 0 ? pesquisados : cadastros;
+
+	return (
+		//ADMIN
 		<>
 			<div className="div-geral-exibircadastros">
 				<h1 style={{ marginBottom: "20px" }} className="h1-personalizado">
 					Lista de Reservas
 				</h1>
-				{cadastros.reverse().map((currentElement) => {
-					const formattedDate = new Date(
+				<div className="div-pesquisar-cadastros-ADM">
+					<input
+						className="input-pesquisar-cadastros-ADM"
+						id="inputPesquisaAdm"
+						name="inputPesquisaAdm"
+						value={search.inputPesquisaAdm}
+						onChange={handleChange}
+					/>
+					<button
+						className="button-pesquisar-cadastros-ADM"
+						onClick={handleClickSearch}>
+						Pesquisar
+					</button>
+				</div>
+
+				{conteudos.reverse().map((currentElement) => {
+					/* const formattedDate = new Date(
 						currentElement.createdAt,
-					).toLocaleDateString("pt-BR");
+					).toLocaleDateString("pt-BR"); */
+
+					let pag = "";
+					if (currentElement.pagamento === "PAGO") {
+						pag = "Efetuado";
+					} else {
+						pag = "Pendente";
+					}
 					return (
-						<div  key={currentElement._id} className="div-map-cadastros">
+						<div key={currentElement._id} className="div-map-cadastros">
 							<div className="div-button-ver">
 								<button
 									className="button-ver"
@@ -47,8 +102,8 @@ function ExibirCadastro() {
 									<p>{currentElement.nomeMotorista}</p>
 								</div>
 								<div className="div-unica-cadastro">
-									<h2>Telefone: </h2>
-									<p>{currentElement.telefoneMotorista}</p>
+									<h2>Nº de Protocolo: </h2>
+									<p>{currentElement.numeroReserva}</p>
 								</div>
 							</div>
 							<div className="div-dupla-cadastro">
@@ -57,8 +112,8 @@ function ExibirCadastro() {
 									<p>{currentElement.nomeExcursionista}</p>
 								</div>
 								<div className="div-unica-cadastro">
-									<h2>Reserva Criada: </h2>
-									<p>{formattedDate}</p>
+									<h2>Pagamento: </h2>
+									<p>{pag}</p>
 								</div>
 							</div>
 						</div>
