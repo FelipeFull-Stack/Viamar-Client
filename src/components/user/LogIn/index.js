@@ -31,47 +31,49 @@ function LogIn() {
 	}
 	return (
 		<>
-			<body>
-				<div className="container">
-					<section id="content">
-						<form action="" onSubmit={handleSubmit}>
-							<h1>Log in</h1>
-							<div>
-								<input
-									type="text"
-									placeholder="Username"
-									id="username"
-									name="email"
-									value={form.email}
-									onChange={handleChange}
-									style={{ textAlign: "justify" }}
-								/>
-							</div>
-							<div>
-								<input
-									type="password"
-									placeholder="Password"
-									id="password"
-									name="password"
-									value={form.password}
-									onChange={handleChange}
-									style={{ textAlign: "justify" }}
-								/>
-							</div>
-							<div>
-								<input type="submit" value="Log in" />
-								<input
-									type="button"
-									value="Sign Up"
-									onClick={() => {
-										navigate("/signup");
-									}}
-								/>
-							</div>
-						</form>
-					</section>
-				</div>
-			</body>
+			<div className="div-login-centralizado">
+				<body>
+					<div className="container">
+						<section id="content">
+							<form action="" onSubmit={handleSubmit}>
+								<h1>Log in</h1>
+								<div>
+									<input
+										type="text"
+										placeholder="Username"
+										id="username"
+										name="email"
+										value={form.email}
+										onChange={handleChange}
+										style={{ textAlign: "justify" }}
+									/>
+								</div>
+								<div>
+									<input
+										type="password"
+										placeholder="Password"
+										id="password"
+										name="password"
+										value={form.password}
+										onChange={handleChange}
+										style={{ textAlign: "justify" }}
+									/>
+								</div>
+								<div>
+									<input type="submit" value="Log in" />
+									<input
+										type="button"
+										value="Sign Up"
+										onClick={() => {
+											navigate("/signup");
+										}}
+									/>
+								</div>
+							</form>
+						</section>
+					</div>
+				</body>
+			</div>
 		</>
 	);
 }

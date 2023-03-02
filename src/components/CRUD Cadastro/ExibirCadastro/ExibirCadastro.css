@@ -67,7 +67,7 @@
 		background-color: rgb(160, 160, 160);
 	}
 	.button-ver:hover {
-		background-color: #24ff65;
+		background-color: #2469ff;
 	}
 	.div-pesquisar-cadastros-ADM {
 		display: flex;
@@ -82,6 +82,12 @@
 		padding: 1px;
 	}
 }
+
+/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
 
 @media (max-width: 999px) and (min-width: 650px) {
 	* {
@@ -155,7 +161,7 @@
 		background-color: rgb(160, 160, 160);
 	}
 	.button-ver:hover {
-		background-color: #24ff65;
+		background-color: #2469ff;
 	}
 	.div-pesquisar-cadastros-ADM {
 		display: flex;
@@ -170,6 +176,12 @@
 		padding: 1px;
 	}
 }
+
+/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
 
 @media (max-width: 649px) and (min-width: 400px) {
 	* {
@@ -243,7 +255,7 @@
 		background-color: rgb(160, 160, 160);
 	}
 	.button-ver:hover {
-		background-color: #24ff65;
+		background-color: #2469ff;
 	}
 	.div-pesquisar-cadastros-ADM {
 		display: flex;
@@ -258,6 +270,12 @@
 		padding: 1px;
 	}
 }
+
+/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
 
 @media (max-width: 399px) and (min-width: 1px) {
 	* {
@@ -334,7 +352,7 @@
 		background-color: rgb(160, 160, 160);
 	}
 	.button-ver:hover {
-		background-color: #24ff65;
+		background-color: #2469ff;
 	}
 	.h1-personalizado {
 		font-size: 1.1rem;
