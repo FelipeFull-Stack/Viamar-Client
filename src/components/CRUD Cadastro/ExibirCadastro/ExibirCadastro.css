@@ -12,25 +12,19 @@
 		justify-content: center;
 		align-items: center;
 		margin-bottom: 7.5%;
-		gap: 2px;
 	}
 
 	.div-map-cadastros {
 		padding: 7.5px;
 		width: 90%;
 		height: 65px;
-		border: 2px solid black;
-		border-radius: 10px;
+		border: 1px solid black;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
 		align-items: center;
-		gap: 5px;
 		background-color: rgb(248, 248, 248);
 		transition: transform 0.3s ease;
-	}
-	.div-map-cadastros:hover {
-		transform: scale(1.015);
 	}
 	.div-map-cadastros h2 {
 		font-size: 1rem;
@@ -64,10 +58,11 @@
 		border: none;
 		border-radius: 25px;
 		font-weight: 700;
-		background-color: rgb(160, 160, 160);
+		background-color: rgb(200, 200, 200);
 	}
 	.button-ver:hover {
-		background-color: #2469ff;
+		background-color: rgb(8, 96, 155);
+		color: rgb(255, 255, 255);
 	}
 	.div-pesquisar-cadastros-ADM {
 		display: flex;
@@ -83,11 +78,11 @@
 	}
 }
 
-/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
-/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
-/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
-/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
-/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/
 
 @media (max-width: 999px) and (min-width: 650px) {
 	* {
@@ -177,11 +172,11 @@
 	}
 }
 
-/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
-/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
-/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
-/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
-/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/
 
 @media (max-width: 649px) and (min-width: 400px) {
 	* {
@@ -271,11 +266,11 @@
 	}
 }
 
-/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
-/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
-/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
-/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
-/*RESPONSIVIDADE*//*RESPONSIVIDADE*//*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/
+/*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/ /*RESPONSIVIDADE*/
 
 @media (max-width: 399px) and (min-width: 1px) {
 	* {
