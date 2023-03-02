@@ -2,7 +2,7 @@ import axios from "axios";
 
 const apiURLs = {
     development: "http://localhost:4002",
-    production: "host do banco de dados",
+    production: "https://busy-puce-duck-wig.cyclic.app",
 };
 
 const api = axios.create({ baseURL: apiURLs[process.env.NODE_ENV] });

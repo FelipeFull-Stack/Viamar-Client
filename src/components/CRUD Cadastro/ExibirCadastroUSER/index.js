@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { api } from "../../../api/api.js";
 import { Link } from "react-router-dom";
+import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
 // import { AuthContext } from "../../../context/authContext";
 
 function ExibirCadastroUSER() {
@@ -54,7 +55,7 @@ function ExibirCadastroUSER() {
 			);
 		}
 	}
-
+	
 	const conteudos = pesquisados.length > 0 ? pesquisados : cadastros;
 
 	return (
