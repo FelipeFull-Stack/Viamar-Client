@@ -56,7 +56,7 @@ function ExibirCadastro() {
 		//ADMIN
 		<>
 			<div className="div-geral-exibircadastros">
-				<h1 style={{ marginBottom: "20px" }} className="h1-personalizado">
+				<h1 style={{ marginBottom: "20px", color: "rgb(8, 96, 155)" }} className="h1-personalizado">
 					Lista de Reservas
 				</h1>
 				<div className="div-pesquisar-cadastros-ADM">

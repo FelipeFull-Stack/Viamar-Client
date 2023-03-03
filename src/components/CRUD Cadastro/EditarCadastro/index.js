@@ -113,7 +113,7 @@ function EditarCadastro() {
 	return (
 		<>
 			<form onSubmit={handleSubmit} style={{ position: "relative" }}>
-				<h1 style={{ marginBottom: "10px" }}>Editando Reserva</h1>
+				<h1 style={{ marginBottom: "10px", color: "rgb(8, 96, 155)" }}>Editando Reserva</h1>
 
 				<div className="div-unica-criarformulario">
 					<label htmlFor="empresaOnibus">Nome da Empresa do Ônibus:</label>

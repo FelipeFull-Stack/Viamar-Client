@@ -153,10 +153,11 @@
 		border: none;
 		border-radius: 25px;
 		font-weight: 700;
-		background-color: rgb(160, 160, 160);
+		background-color: rgb(200, 200, 200);
 	}
 	.button-ver:hover {
-		background-color: #2469ff;
+		background-color: rgb(8, 96, 155);
+		color: rgb(255, 255, 255);
 	}
 	.div-pesquisar-cadastros-ADM {
 		display: flex;
@@ -247,10 +248,11 @@
 		border: none;
 		border-radius: 25px;
 		font-weight: 700;
-		background-color: rgb(160, 160, 160);
+		background-color: rgb(200, 200, 200);
 	}
 	.button-ver:hover {
-		background-color: #2469ff;
+		background-color: rgb(8, 96, 155);
+		color: rgb(255, 255, 255);
 	}
 	.div-pesquisar-cadastros-ADM {
 		display: flex;
@@ -344,10 +346,11 @@
 		border: none;
 		border-radius: 25px;
 		font-weight: 700;
-		background-color: rgb(160, 160, 160);
+		background-color: rgb(200, 200, 200);
 	}
 	.button-ver:hover {
-		background-color: #2469ff;
+		background-color: rgb(8, 96, 155);
+		color: rgb(255, 255, 255);
 	}
 	.h1-personalizado {
 		font-size: 1.1rem;
