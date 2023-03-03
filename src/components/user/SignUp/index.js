@@ -33,85 +33,87 @@ function SignUp() {
 
 	return (
 		<>
-			<body>
-				<div className="container">
-					<section id="content">
-						<form action="" onSubmit={handleSubmit}>
-							<h1>Cadastro</h1>
+			<div className="div-login-centralizado" id="login">
+				<body>
+					<div className="container">
+						<section id="content">
+							<form action="" onSubmit={handleSubmit}>
+								<h1>Cadastro</h1>
 
-							<div>
-								<input
-									type="text"
-									placeholder="Nome"
-									required
-									id="nomeUsuario"
-									name="nomeUsuario"
-									value={form.nomeUsuario}
-									onChange={handleChange}
-								/>
-							</div>
-							<div>
-								<input
-									type="text"
-									placeholder="Nome da Empresa"
-									required
-									id="empresaUsuario"
-									name="empresaUsuario"
-									value={form.empresaUsuario}
-									onChange={handleChange}
-								/>
-							</div>
-							<div>
-								<input
-									type="text"
-									placeholder="Telefone da Empresa"
-									required
-									id="telefoneUsuario"
-									name="telefoneUsuario"
-									value={form.telefoneUsuario}
-									onChange={handleChange}
-								/>
-							</div>
-							<div>
-								<input
-									type="text"
-									placeholder="Cidade"
-									required
-									id="cidadeUsuario"
-									name="cidadeUsuario"
-									value={form.cidadeUsuario}
-									onChange={handleChange}
-								/>
-							</div>
-							<div>
-								<input
-									type="text"
-									placeholder="Username"
-									required
-									id="username"
-									name="email"
-									value={form.email}
-									onChange={handleChange}
-								/>
-							</div>
-							<div>
-								<input
-									type="password"
-									placeholder="Password"
-									required
-									id="password"
-									name="password"
-									value={form.password}
-									onChange={handleChange}
-								/>
-							</div>
-							<div>
-								<input type="submit" value="Sign in" />
-							</div>
-						</form>
-					</section>
-				</div>
-			</body>
+								<div>
+									<input
+										type="text"
+										placeholder="Nome"
+										required
+										id="nomeUsuario"
+										name="nomeUsuario"
+										value={form.nomeUsuario}
+										onChange={handleChange}
+									/>
+								</div>
+								<div>
+									<input
+										type="text"
+										placeholder="Nome da Empresa"
+										required
+										id="empresaUsuario"
+										name="empresaUsuario"
+										value={form.empresaUsuario}
+										onChange={handleChange}
+									/>
+								</div>
+								<div>
+									<input
+										type="text"
+										placeholder="Telefone da Empresa"
+										required
+										id="telefoneUsuario"
+										name="telefoneUsuario"
+										value={form.telefoneUsuario}
+										onChange={handleChange}
+									/>
+								</div>
+								<div>
+									<input
+										type="text"
+										placeholder="Cidade"
+										required
+										id="cidadeUsuario"
+										name="cidadeUsuario"
+										value={form.cidadeUsuario}
+										onChange={handleChange}
+									/>
+								</div>
+								<div>
+									<input
+										type="text"
+										placeholder="Username"
+										required
+										id="username"
+										name="email"
+										value={form.email}
+										onChange={handleChange}
+									/>
+								</div>
+								<div>
+									<input
+										type="password"
+										placeholder="Password"
+										required
+										id="password"
+										name="password"
+										value={form.password}
+										onChange={handleChange}
+									/>
+								</div>
+								<div>
+									<input type="submit" value="Sign in" />
+								</div>
+							</form>
+						</section>
+					</div>
+				</body>
+			</div>
 		</>
 	);
 }
