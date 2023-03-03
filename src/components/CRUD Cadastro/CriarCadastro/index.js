@@ -270,10 +270,9 @@ function CriarCadastro() {
 					id="pagamento"
 					name="pagamento"
 					value={form.pagamento}
-					onChange={handleChange}
 					disabled>
-					<option value="NAO PAGO">Pendente</option>
-					<option value="PAGO">Efetuado</option>
+					<option value="">Pendente</option>
+					<option value="">Efetuado</option>
 				</select>
 			</div>
 
