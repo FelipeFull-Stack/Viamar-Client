@@ -25,8 +25,7 @@
 		transition: transform 0.3s ease;
 	}
 	.div-unica-esquerda:hover {
-		transform: scale(1.01);
-		border-bottom: 1px solid black;
+		border-bottom: 2px solid black;
 	}
 
 	.div-unica-direita {
@@ -36,8 +35,7 @@
 		transition: transform 0.3s ease;
 	}
 	.div-unica-direita:hover {
-		transform: scale(1.015);
-		border-bottom: 1px solid black;
+		border-bottom: 2px solid black;
 	}
 
 	.div-unica {
@@ -50,8 +48,7 @@
 		transition: transform 0.3s ease;
 	}
 	.div-unica:hover {
-		transform: scale(1.01);
-		border-bottom: 1px solid black;
+		border-bottom: 2px solid black;
 	}
 	.div-unica input {
 		width: 50%;
