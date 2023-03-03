@@ -327,7 +327,7 @@ form:after {
 	margin: 20px 0 35px 15px;
 	position: relative;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-	width: 120px;
+	width: 95px;
 }
 #content form input[type="submit"]:hover {
 	background: rgb(254, 193, 81);
@@ -471,7 +471,7 @@ form:after {
 	margin: 20px 0 35px 15px;
 	position: relative;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-	width: 80px;
+	width: 95px;
 }
 #content form input[type="button"]:hover {
 	background: rgb(254, 193, 81);
