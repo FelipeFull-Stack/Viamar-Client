@@ -50,14 +50,6 @@ function Menubar() {
 							Formulário
 						</button>
 					</li>
-					{/* <li>
-						<button
-							onClick={() => {
-								navigate("/edit-cadastro");
-							}}>
-							Editar Cadastro
-						</button>
-					</li> */}
 					<li>
 						<button
 							onClick={() => {
@@ -97,12 +89,6 @@ function Menubar() {
 								}}>
 								Formulário
 							</button>
-							{/* <button
-								onClick={() => {
-									navigate("/edit-cadastro");
-								}}>
-								Editar Cadastro
-							</button> */}
 							<button
 								onClick={() => {
 									navigate("/exibir-cadastros");
