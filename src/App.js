@@ -12,22 +12,33 @@ import { SignUp } from "./components/user/SignUp/index";
 import { MyContextComponent } from "./context/MyContext";
 import "./App.css";
 
+function AuthenticatedRoutes() {
+	return (
+		<>
+			<Menubar />
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/cadastro" element={<Cadastro />} />
+				<Route path="/exibir-cadastros" element={<ExibirCadastros />} />
+				<Route path="/detalhe-cadastro/:id" element={<DetalheCadastro />} />
+				<Route path="/editar-cadastro/:id" element={<EditCadastro />} />
+			</Routes>
+			<Footer />
+		</>
+	);
+}
+
 function App() {
 	return (
 		<>
 			<MyContextComponent>
 				<AuthContextComponent>
-					<Menubar />
 					<Routes>
 						<Route path="/" element={<LogIn />} />
-						<Route path="/cadastro" element={<Cadastro />} />
-						<Route path="/exibir-cadastros" element={<ExibirCadastros />} />
-						<Route path="/detalhe-cadastro/:id" element={<DetalheCadastro />} />
-						<Route path="/editar-cadastro/:id" element={<EditCadastro />} />
 						<Route path="/login" element={<LogIn />} />
 						<Route path="/signup" element={<SignUp />} />
+						<Route path="/*" element={<AuthenticatedRoutes />} />
 					</Routes>
-					<Footer />
 				</AuthContextComponent>
 			</MyContextComponent>
 		</>

@@ -290,20 +290,3 @@ function CriarCadastro() {
 }
 
 export { CriarCadastro };
-
-// const [formulario, setFormulario] = useState({
-//     empresaOnibus: '',
-//     placaOnibus: '',
-//     nomeMotorista: '',
-//     telefoneMotorista: '',
-//     nomeExcursionista: '',
-//     telefoneExcursionista: '',
-//     localHospedagem: '',
-//     dataEntrada: '',
-//     dataSaida: '',
-//     horaEntrada: '',
-//     horaSaida: '',
-//     localOrigem: '',
-//     localDestino: '',
-//     veiculoUsado: ''
-// });

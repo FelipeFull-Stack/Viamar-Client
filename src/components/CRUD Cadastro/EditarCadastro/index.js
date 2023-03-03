@@ -50,29 +50,6 @@ function EditarCadastro() {
 		}
 	}, [form.pagamento]);
 
-	function clearFunction() {
-		setForm({
-			empresaOnibus: "",
-			placaOnibus: "",
-			nomeMotorista: "",
-			telefoneMotorista: "",
-			nomeExcursionista: "",
-			telefoneExcursionista: "",
-			localHospedagem: "",
-			dataEntrada: "",
-			dataSaida: "",
-			quantidadeDias: "",
-			horaEntrada: "",
-			horaSaida: "",
-			localOrigem: "",
-			localDestino: "",
-			veiculoUsado: "",
-			dam: "",
-			pagamento: "",
-			habilitado: "",
-		});
-	}
-
 	const handleChange = (event) => {
 		setForm({ ...form, [event.target.name]: event.target.value });
 	};

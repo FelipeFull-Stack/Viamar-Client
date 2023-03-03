@@ -86,7 +86,15 @@ function ExibirCadastro() {
 						pag = "Pendente";
 					}
 					return (
-						<div key={currentElement._id} className="div-map-cadastros">
+						<div
+							key={currentElement._id}
+							className="div-map-cadastros"
+							style={{
+								backgroundColor:
+									currentElement.numeroReserva % 2 === 0
+										? "rgb(108,196,255)"
+										: "rgb(228,242,255)",
+							}}>
 							<div className="div-button-ver">
 								<button
 									className="button-ver"
