@@ -22,12 +22,10 @@ function ExibirCadastros() {
 				setAdm(role === "ADMIN");
 
 				if (adm) {
-					console.log("adm é true");
 					const response = await api.get("/cadastro/ADMIN/");
 					setFormADMIN(response.data);
 				} else {
 					const { _id } = JSON.parse(user).user;
-					console.log("adm é false");
 					const response = await api.get(`/cadastro/${_id}`);
 					setFormUSER(response.data);
 				}

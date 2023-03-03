@@ -82,7 +82,7 @@ function CriarCadastro() {
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<h1 style={{ marginBottom: "10px" }}>Formulário de Reserva</h1>
+			<h1 style={{ marginBottom: "10px", color: "rgb(8, 96, 155)" }}>Formulário de Reserva</h1>
 
 			<div className="div-unica-criarformulario">
 				<label htmlFor="empresaOnibus">Nome da Empresa do Ônibus:</label>
@@ -270,10 +270,9 @@ function CriarCadastro() {
 					id="pagamento"
 					name="pagamento"
 					value={form.pagamento}
-					onChange={handleChange}
 					disabled>
-					<option value="NAO PAGO">Pendente</option>
-					<option value="PAGO">Efetuado</option>
+					<option value="">Pendente</option>
+					<option value="">Efetuado</option>
 				</select>
 			</div>
 
