@@ -29,9 +29,10 @@ function LogIn() {
 			console.log(`Erro do Front-end em LogIn(handleSubmit): ${err}`);
 		}
 	}
+
 	return (
 		<>
-			<div className="div-login-centralizado">
+			<div className="div-login-centralizado" id="login">
 				<body>
 					<div className="container">
 						<section id="content">

@@ -8,7 +8,7 @@
 		position: relative; /* Adicionado para o posicionamento do pseudo-elemento */
 	}
 	.div-unica-editarformulario {
-		width: 90%;
+		width:div-dupla 90%;
 		display: flex;
 		font-size: 1rem;
 		flex-direction: column;
@@ -38,7 +38,6 @@
 		transition: transform 0.3s ease;
 	}
 	.div-unica-esquerda:hover {
-		transform: scale(1.075);
 	}
 
 	.div-unica-direita {
@@ -48,7 +47,6 @@
 		transition: transform 0.3s ease;
 	}
 	.div-unica-direita:hover {
-		transform: scale(1.075);
 	}
 
 	.div-unica {
@@ -61,7 +59,6 @@
 		transition: transform 0.3s ease;
 	}
 	.div-unica:hover {
-		transform: scale(1.075);
 	}
 	.div-unica input {
 		width: 50%;
