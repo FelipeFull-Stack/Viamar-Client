@@ -107,7 +107,7 @@ function SignUp() {
 									/>
 								</div>
 								<div>
-									<input type="submit" value="Sign in" />
+									<input type="submit" value="Cadastro" />
 								</div>
 							</form>
 						</section>

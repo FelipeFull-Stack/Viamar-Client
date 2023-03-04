@@ -37,7 +37,7 @@ function LogIn() {
 					<div className="container">
 						<section id="content">
 							<form action="" onSubmit={handleSubmit}>
-								<h1>Log in</h1>
+								<h1>Conectar-se</h1>
 								<div>
 									<input
 										type="text"
@@ -61,10 +61,10 @@ function LogIn() {
 									/>
 								</div>
 								<div>
-									<input type="submit" value="Log in" />
+									<input type="submit" value="Entrar" />
 									<input
 										type="button"
-										value="Sign Up"
+										value="Cadastrar"
 										onClick={() => {
 											navigate("/signup");
 										}}
