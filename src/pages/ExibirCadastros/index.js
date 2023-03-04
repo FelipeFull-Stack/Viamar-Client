@@ -33,6 +33,7 @@ function ExibirCadastros() {
 			} catch (err) {
 				console.log(`Erro do Front-end em ExibirCadastro/CheckUser: ${err}`);
 				setIsLoading(false);
+				window.alert("Ops... Alguma coisa deu errada, tente novamente mais tarde.");
 			}
 		}
 		CheckUser();

@@ -77,6 +77,7 @@ function CriarCadastro() {
 			navigate("/exibir-cadastros");
 		} catch (err) {
 			console.log(`Erro do Front-end em CriarCadastro/handleSubmit: ${err}`);
+			window.alert("Ops... Alguma coisa deu errada, tente rever os dados novamente.");
 		}
 	}
 
