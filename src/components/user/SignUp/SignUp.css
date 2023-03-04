@@ -275,10 +275,22 @@ form:after {
 	outline: none;
 }
 #username {
-	background-position: 10px 10px !important;
+	background-position: 5px 15px !important;
 }
 #password {
-	background-position: 10px -53px !important;
+	background-position: 5px -48px !important;
+}
+#nomeUsuario {
+	background-position: 5px 15px !important;
+}
+#empresaUsuario {
+	background-position: 5px 15px !important;
+}
+#telefoneUsuario {
+	background-position: 5px 15px !important;
+}
+#cidadeUsuario {
+	background-position: 5px 15px !important;
 }
 #content form input[type="submit"] {
 	background: rgb(254, 231, 154);
@@ -567,5 +579,4 @@ form:after {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-  }
-  
+}
