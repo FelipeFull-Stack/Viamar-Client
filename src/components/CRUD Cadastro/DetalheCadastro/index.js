@@ -15,6 +15,7 @@ function DetalheCadastro() {
 				setForm(response.data);
 			} catch (err) {
 				console.log(`Erro do Front-end em DetalheCadastro/fetchForm: ${err}`);
+				window.alert("Ops... Alguma coisa deu errada, tente novamente mais tarde.");
 			}
 		}
 		fetchForm();
@@ -42,6 +43,7 @@ function DetalheCadastro() {
 					console.log(
 						`Erro do Back-end em DetalheCadastro/handleDelete: ${err}`,
 					);
+					window.alert("Ops... Alguma coisa deu errada, tente novamente mais tarde.");
 				}
 			}
 			handleDelete();

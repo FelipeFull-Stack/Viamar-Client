@@ -27,6 +27,7 @@ function LogIn() {
 			navigate(`/exibir-cadastros`);
 		} catch (err) {
 			console.log(`Erro do Front-end em LogIn(handleSubmit): ${err}`);
+			window.alert("Ops... Acho que você digitou algo errado ou este registro não existe. Por favor, confira seus dados de LogIn.");
 		}
 	}
 

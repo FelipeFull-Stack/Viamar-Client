@@ -46,7 +46,7 @@ function EditarCadastro() {
 		if (form.pagamento === "PAGO") {
 			setForm({ ...form, color: "green", habilitado: true });
 		} else if (form.pagamento === "NAO PAGO") {
-			setForm({ ...form, color: "red", habilitado: false  });
+			setForm({ ...form, color: "red", habilitado: false });
 		}
 	}, [form.pagamento]);
 
@@ -81,6 +81,7 @@ function EditarCadastro() {
 			navigate("/exibir-cadastros/");
 		} catch (err) {
 			console.log(`Erro do Front-end em CriarCadastro/handleSubmit: ${err}`);
+			window.alert("Ops... Alguma coisa deu errada, tente novamente mais tarde.");
 		}
 	}
 
@@ -96,6 +97,9 @@ function EditarCadastro() {
 				} catch (err) {
 					console.log(
 						`Erro do Back-end em DetalheCadastro/handleDelete: ${err}`,
+					);
+					window.alert(
+						"Ops... Alguma coisa deu errada, tente novamente mais tarde.",
 					);
 				}
 			}
@@ -113,7 +117,9 @@ function EditarCadastro() {
 	return (
 		<>
 			<form onSubmit={handleSubmit} style={{ position: "relative" }}>
-				<h1 style={{ marginBottom: "10px", color: "rgb(8, 96, 155)" }}>Editando Reserva</h1>
+				<h1 style={{ marginBottom: "10px", color: "rgb(8, 96, 155)" }}>
+					Editando Reserva
+				</h1>
 
 				<div className="div-unica-criarformulario">
 					<label htmlFor="empresaOnibus">Nome da Empresa do Ônibus:</label>

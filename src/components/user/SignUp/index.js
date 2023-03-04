@@ -28,6 +28,7 @@ function SignUp() {
 			navigate("/login");
 		} catch (err) {
 			console.log(`Erro do Front-end em SingUp: ${err}`);
+			window.alert("Ops... Acho que você digitou alguma coisa errada! Porfavor, reveja seu cadastro.");
 		}
 	}
 
