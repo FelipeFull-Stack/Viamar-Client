@@ -53,7 +53,7 @@ function LogIn() {
 								<div>
 									<input
 										type="password"
-										placeholder="Password"
+										placeholder="Senha"
 										id="password"
 										name="password"
 										value={form.password}
