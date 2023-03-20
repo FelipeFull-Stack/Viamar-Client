@@ -138,7 +138,7 @@ function DetalheCadastro() {
 
 					<div className="div-unica-direita">
 						<p htmlFor="veiculoUsado">Veículo:</p>
-						<p className="paragrafo-test">{(form.veiculoUsado === "ONIBUS" ? "Ônibus" : form.veiculoUsado === "VAN" ? "Van" : "Mini-Van")}</p>
+						<p className="paragrafo-test">{(form.veiculoUsado === "ONIBUS" ? "Ônibus" : form.veiculoUsado === "VAN" ? "Van" : "Micro-ônibus")}</p>
 					</div>
 				</div>
 

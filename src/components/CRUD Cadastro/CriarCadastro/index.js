@@ -249,7 +249,7 @@ function CriarCadastro() {
 					<option>... Selecione o Veículo ...</option>
 					<option value="ONIBUS">Ônibus</option>
 					<option value="VAN">Van</option>
-					<option value="MINIVAN">Mini-Van</option>
+					<option value="MICRO-ONIBUS">Micro-ônibus</option>
 				</select>
 			</div>
 			<div className="div-unica-criarformulario">
