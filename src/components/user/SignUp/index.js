@@ -99,7 +99,7 @@ function SignUp() {
 								<div>
 									<input
 										type="password"
-										placeholder="Senha Ex: @Senha123"
+										placeholder="Senha"
 										required
 										id="password"
 										name="password"
