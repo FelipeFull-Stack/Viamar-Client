@@ -42,7 +42,7 @@ function LogIn() {
 								<div>
 									<input
 										type="text"
-										placeholder="Username"
+										placeholder="E-mail"
 										id="username"
 										name="email"
 										value={form.email}

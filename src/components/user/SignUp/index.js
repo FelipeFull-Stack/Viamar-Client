@@ -88,7 +88,7 @@ function SignUp() {
 								<div>
 									<input
 										type="text"
-										placeholder="Username"
+										placeholder="E-mail"
 										required
 										id="username"
 										name="email"
@@ -99,7 +99,7 @@ function SignUp() {
 								<div>
 									<input
 										type="password"
-										placeholder="Password"
+										placeholder="Exemplo: @Test123"
 										required
 										id="password"
 										name="password"
