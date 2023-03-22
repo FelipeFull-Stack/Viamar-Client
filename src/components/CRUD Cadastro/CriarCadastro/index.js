@@ -61,7 +61,7 @@ function CriarCadastro() {
 					),
 				});
 			} else {
-				window.alert("Erro: a data de saída é antes da data de entrada.");
+				window.alert("Erro: a 'data de saída' não pode ser antes da 'data de entrada'.");
 			}
 		}
 	}, [form.dataEntrada, form.dataSaida]);
