@@ -272,8 +272,8 @@ function CriarCadastro() {
 					name="pagamento"
 					value={form.pagamento}
 					disabled>
-					<option value="">Pendente</option>
-					<option value="">Efetuado</option>
+					<option>Pendente</option>
+					{/* <option value="">Efetuado</option> */}
 				</select>
 			</div>
 
