@@ -19,7 +19,7 @@ function ExibirCadastro() {
 				setCadastros(response.data);
 			} catch (err) {
 				console.log(`Erro do Front-end em ExibirCadastro: ${err}`);
-				window.alert("Ops... Alguma coisa deu errada no carregamento dos formulários, tente novamente mais tarde.");
+				window.alert("Ops... Alguma coisa deu errada no carregamento dos formulários, tente novamente mais tarde. ADM");
 			}
 		}
 		fetchCadastros();
