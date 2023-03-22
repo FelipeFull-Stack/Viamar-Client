@@ -102,7 +102,7 @@ function EditarCadastro() {
 						`Erro do Back-end em DetalheCadastro/handleDelete: ${err}`,
 					);
 					window.alert(
-						"Ops... Alguma coisa deu errada, tente novamente mais tarde.",
+						"Ops... Alguma coisa deu errada ao deletar, tente novamente mais tarde.",
 					);
 				}
 			}
