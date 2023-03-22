@@ -37,6 +37,7 @@ function EditarCadastro() {
 				console.log(
 					`Erro do Front-end em EditarCadastro/fecthCadastro: ${err} `,
 				);
+				window.alert("Ops... Algo deu errado no carregamento do Formulário, tente novamente mais tarde.")
 			}
 		}
 		fetchCadastros();
