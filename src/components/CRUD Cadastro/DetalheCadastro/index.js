@@ -43,6 +43,10 @@ function DetalheCadastro() {
 		fetchForm();
 	}, [params.id]);
 
+	const handleChange = (event) => {
+		setForm({ ...form, [event.target.name]: event.target.value });
+	};
+
 	const formattedDateEntrada = new Date(form.dataEntrada).toLocaleDateString(
 		"pt-BR",
 	);
@@ -70,6 +74,21 @@ function DetalheCadastro() {
 				}
 			}
 			handleDelete();
+		}
+	}
+
+	async function handleSubmit(event) {
+		event.preventDefault();
+		try {
+			await api.put(`/cadastro/ADMIN/${params.id}`, {
+				pagamento: form.pagamento,
+			});
+			navigate("/exibir-cadastros/");
+		} catch (err) {
+			console.log(`Erro do Front-end em CriarCadastro/handleSubmit: ${err}`);
+			window.alert(
+				"Ops... Alguma coisa deu errada no envio do formulário, tente novamente mais tarde.",
+			);
 		}
 	}
 
@@ -193,10 +212,16 @@ function DetalheCadastro() {
 					className="div-dupla"
 					style={{ backgroundColor: "rgb(108,196,255)" }}>
 					<div className="div-unica-esquerda">
-						<p htmlFor="localHospedagem">Pagamento:</p>
-						<p className="paragrafo-test">
-							{form.pagamento === "PAGO" ? "Efetuado" : "Pendente"}
-						</p>
+						<p htmlFor="pagamento">Pagamento:</p>
+						<select
+							className="select-pagamento"
+							id="pagamento"
+							name="pagamento"
+							value={form.pagamento}
+							onChange={handleChange}>
+							<option value="PAGO">Efetuado</option>
+							<option value="NAO PAGO">Pendente</option>
+						</select>
 					</div>
 
 					<div className="div-unica-direita">
@@ -208,13 +233,8 @@ function DetalheCadastro() {
 				</div>
 
 				<div className="div-button">
-					<button
-						className="btn1"
-						type="button"
-						onClick={() => {
-							navigate(`/editar-cadastro/${params.id}`);
-						}}>
-						Editar
+					<button className="btn1" type="button" onClick={handleSubmit}>
+						Salvar
 					</button>
 					<button
 						className="btn2"
@@ -224,9 +244,9 @@ function DetalheCadastro() {
 						}}>
 						Voltar
 					</button>
-					<button className="btn3" type="button" onClick={handleDeleteClick}>
+					{/* <button className="btn3" type="button" onClick={handleDeleteClick}>
 						Deletar
-					</button>
+					</button> */}
 				</div>
 			</form>
 		</>

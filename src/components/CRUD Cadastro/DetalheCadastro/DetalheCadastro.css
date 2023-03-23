@@ -170,6 +170,15 @@
 		width: 100%;
 		background-color: #ccc;
 	}
+	.select-pagamento {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		width: 20%;
+		height: 36px;
+		border: none;
+		font-size: 16px;
+	}
 }
 /* ///////////////////////////////////////////////////// */
 /* ///////////////////////////////////////////////////// */
@@ -302,7 +311,7 @@
 	}
 
 	.btn1:hover {
-		background-color: #00ff2a;
+		background-color: rgb(108,196,255);
 	}
 	.btn2 {
 		background-color: gray;
@@ -320,7 +329,7 @@
 		margin-bottom: 50px;
 	}
 	.btn2:hover {
-		background-color: rgb(255, 255, 0);
+		background-color: rgb(159, 159, 159);
 	}
 
 	.btn3 {
@@ -389,6 +398,15 @@
 		height: 4px;
 		width: 100%;
 		background-color: #ccc;
+	}
+	.select-pagamento {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 34px;
+		border: none;
+		font-size: 16px;
 	}
 }
 
@@ -512,7 +530,7 @@
 	}
 
 	.btn1:hover {
-		background-color: #00ff2a;
+		background-color: rgb(108,196,255);
 	}
 	.btn2 {
 		background-color: gray;
@@ -530,7 +548,7 @@
 		margin-bottom: 50px;
 	}
 	.btn2:hover {
-		background-color: rgb(235, 235, 0);
+		background-color: rgb(159, 159, 159);
 	}
 
 	.btn3 {
