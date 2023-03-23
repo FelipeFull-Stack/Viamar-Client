@@ -61,7 +61,7 @@ function CriarCadastro() {
 					),
 				});
 			} else {
-				window.alert("Erro: a data de saída é antes da data de entrada.");
+				window.alert("Erro: a 'data de saída' não pode ser antes da 'data de entrada'.");
 			}
 		}
 	}, [form.dataEntrada, form.dataSaida]);
@@ -77,7 +77,7 @@ function CriarCadastro() {
 			navigate("/exibir-cadastros");
 		} catch (err) {
 			console.log(`Erro do Front-end em CriarCadastro/handleSubmit: ${err}`);
-			window.alert("Ops... Alguma coisa deu errada, tente rever os dados novamente.");
+			window.alert("Ops... Alguma coisa deu errada no envio do formulário, tente rever os dados ou tente denovo mais tarde.");
 		}
 	}
 
@@ -272,8 +272,8 @@ function CriarCadastro() {
 					name="pagamento"
 					value={form.pagamento}
 					disabled>
-					<option value="">Pendente</option>
-					<option value="">Efetuado</option>
+					<option>Pendente</option>
+					{/* <option value="">Efetuado</option> */}
 				</select>
 			</div>
 

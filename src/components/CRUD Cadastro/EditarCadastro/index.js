@@ -37,6 +37,7 @@ function EditarCadastro() {
 				console.log(
 					`Erro do Front-end em EditarCadastro/fecthCadastro: ${err} `,
 				);
+				window.alert("Ops... Algo deu errado no carregamento do Formulário, tente novamente mais tarde.")
 			}
 		}
 		fetchCadastros();
@@ -81,7 +82,9 @@ function EditarCadastro() {
 			navigate("/exibir-cadastros/");
 		} catch (err) {
 			console.log(`Erro do Front-end em CriarCadastro/handleSubmit: ${err}`);
-			window.alert("Ops... Alguma coisa deu errada, tente novamente mais tarde.");
+			window.alert(
+				"Ops... Alguma coisa deu errada no envio do formulário, tente novamente mais tarde.",
+			);
 		}
 	}
 
@@ -99,7 +102,7 @@ function EditarCadastro() {
 						`Erro do Back-end em DetalheCadastro/handleDelete: ${err}`,
 					);
 					window.alert(
-						"Ops... Alguma coisa deu errada, tente novamente mais tarde.",
+						"Ops... Alguma coisa deu errada ao deletar, tente novamente mais tarde.",
 					);
 				}
 			}
