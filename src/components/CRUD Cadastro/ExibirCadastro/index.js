@@ -74,7 +74,7 @@ function ExibirCadastro() {
 				window.alert("Permissão de download de dados NEGADA pelo usuário.");
 			}
 		} catch (error) {
-			console.error(error);
+			console.log(`Erro ao tentar exportar o arquivo em excel: ${error}`);
 		}
 	};
 
