@@ -19,7 +19,9 @@ function ExibirCadastro() {
 				setCadastros(response.data);
 			} catch (err) {
 				console.log(`Erro do Front-end em ExibirCadastro: ${err}`);
-				window.alert("Ops... Alguma coisa deu errada no carregamento dos formulários, tente novamente mais tarde. ADM");
+				window.alert(
+					"Ops... Alguma coisa deu errada no carregamento dos formulários, tente novamente mais tarde. ADM",
+				);
 			}
 		}
 		fetchCadastros();
@@ -51,14 +53,42 @@ function ExibirCadastro() {
 		}
 	}
 
+	const handleExportToExcel = async () => {
+		try {
+			const hasPermission = window.confirm(
+				"Você deseja fazer o download dos dados em Excel?",
+			);
+
+			if (hasPermission) {
+				const response = await api.get("/export-to-excel");
+				const blob = new Blob([response.data], {
+					type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+				});
+				const url = window.URL.createObjectURL(blob);
+				const link = document.createElement("a");
+				link.href = url;
+				link.setAttribute("download", "dados.xlsx");
+				document.body.appendChild(link);
+				link.click();
+			} else {
+				window.alert("Permissão de download de dados NEGADA pelo usuário.");
+			}
+		} catch (error) {
+			console.error(error);
+		}
+	};
+
 	const conteudos = pesquisados.length > 0 ? pesquisados : cadastros;
 
 	return (
 		//ADMIN
 		<>
 			<div className="div-geral-exibircadastros">
-				<h1 style={{ marginBottom: "20px", color: "rgb(8, 96, 155)" }} className="h1-personalizado">
+				<h1
+					style={{ marginBottom: "20px", color: "rgb(8, 96, 155)" }}
+					className="h1-personalizado">
 					Lista de Reservas
+					<button onClick={handleExportToExcel}>Exportar</button>
 				</h1>
 				<div className="div-pesquisar-cadastros-ADM">
 					<input
